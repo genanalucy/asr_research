@@ -39,19 +39,23 @@ Whisper-small、XLS-R-300M 或 wav2vec2-XLSR 等路线在不同训练小时数�
 5. 并行保存保调原文、规范化文本和必要的去调版本。删除调号只能作为独立评分条件，不能为了提高分数临时处理。
 6. 明天必须记录：语言变体、有效小时数、句数、说话人数、录音域、转写者、音节/音素/调号规则和数据许可。
 
-## 四、模型和基线
+## 四、模型和基线（按 4 张 L20 扩展）
 
 ### 必跑
 
-1. **XLS-R-300M 或 wav2vec2-XLSR-300M + CTC**：跨语言编码器基线。
-2. **Whisper-small + LoRA 或受控微调**：序列到序列基线。
+1. **XLS-R-300M + CTC**：跨语言编码器主基线。
+2. **XLS-R-1B 或 mHuBERT-1B + CTC**：容量扩展和大模型数据效率对照，只有显存和实现稳定时加入。
+3. **Whisper-small/medium + LoRA 或受控全量微调**：序列到序列主线。
 
 ### 条件允许时
 
-3. **Conformer/CTC 从头训练**：用来区分预训练收益；若算力不足放到附录。
-4. **MMS**：只有在官方 checkpoint 与具体壮语变体匹配时才加入，不能仅凭语言名称判断覆盖。
+4. **Whisper-large-v3 + LoRA**：只做全量数据的高容量 stress test，不进入所有小时数和所有 seed，避免把显存规模误当成方法贡献。
+5. **Conformer/CTC 从头训练**：用来区分预训练收益；可放在 20/50/all 小时。
+6. **MMS-300M/1B**：只有在官方 checkpoint 与具体壮语变体匹配时才加入，不能仅凭语言名称判断覆盖。
 
-所有模型统一采样率、数据划分、early stopping 规则、主要训练预算和验证集。记录参数量、显存、训练时长和有效更新数。
+所有模型统一采样率、数据划分、early stopping 规则和验证集。训练预算按模型族单独预注册，不能让大模型获得无限调参机会。记录参数量、显存、训练时长、有效更新数、吞吐和每个实验的 GPU 时数。
+
+四张 L20 的并行安排：GPU0 跑 XLS-R-300M，GPU1 跑 Whisper-small/medium，GPU2 跑大容量或 Conformer，GPU3 跑重复 seed、MMS 或错误分析前的复核任务。不同模型族不能共享会改变结果的缓存或测试预测。
 
 ## 五、指标
 
@@ -108,7 +112,7 @@ Whisper-small、XLS-R-300M 或 wav2vec2-XLSR 等路线在不同训练小时数�
 
 - 先跑固定20小时、不同 speaker 数的 A 组；
 - 再跑固定8或10名 speaker、不同小时数的 B 组；
-- 两个主模型，关键格至少2–3 seeds；
+- 三个主模型族，关键格至少3 seeds；
 - 输出“每增加一倍小时数”和“每增加一倍 speaker 数”的相对变化及 speaker-bootstrap 置信区间。
 
 ### M3：稳健性和音系诊断
@@ -118,6 +122,13 @@ Whisper-small、XLS-R-300M 或 wav2vec2-XLSR 等路线在不同训练小时数�
 - speaker、domain、音系类别分层；
 - bootstrap 置信区间；
 - 生成错误热图和案例。
+
+### M3.5：模型容量和预训练路线
+
+- 在固定的 20h、50h、all 小时和固定 speaker-disjoint 划分上比较 300M、1B、Whisper-small/medium；
+- Whisper-large-v3 只跑 all 小时的 LoRA stress test；
+- 报告参数量、训练 GPU 时数和每小时标注数据的收益，不能只报告最终分数；
+- 用配对 bootstrap 检验大模型是否在未见说话人上稳定优于小模型。
 
 ### M4：可选瑶语迁移 pilot
 
@@ -141,3 +152,17 @@ Whisper-small、XLS-R-300M 或 wav2vec2-XLSR 等路线在不同训练小时数�
 - WER/CER 与 FER/TER 排序完全一致：报告评测边界，把重点转为规模规律和错误解释；
 - 单 seed 提升小于 bootstrap 不确定性：不宣称方法有效；
 - 瑶语迁移没有稳定收益：保留为负结果或删除，不强行讲语言亲缘因果。
+
+## 十、算力扩大后的可选扩展
+
+### 1. 轻量音系多任务 pilot
+
+如果转写能可靠解析音节和调类，可以在 XLS-R/Whisper encoder 上增加音节、音素或调类辅助头，比较：主 ASR loss、ASR+音节、ASR+音节+调类。它只作为受控 pilot；普通多任务声调监督已有直接先例，不能因为用了更多 GPU 就宣称方法首创。
+
+### 2. 更完整的统计重复
+
+核心 50h/all 配置跑 5 seeds；A/B 两组正交条件跑 3 seeds；小规模 pilot 只跑 1 seed。用 speaker-bootstrap 和 paired utterance-bootstrap 分开报告，不把大量 seed 当作独立说话人样本。
+
+### 3. 瑶语迁移矩阵
+
+如果瑶语至少约10–15小时、至少5名说话人且变体明确，可做 target-only、Zhuang-pre-adapt、multilingual-joint 三组，并在 1/5/all 小时下跑 3 seeds。若瑶语仍低于这个门槛，只做 1–2 个 pilot 点。
