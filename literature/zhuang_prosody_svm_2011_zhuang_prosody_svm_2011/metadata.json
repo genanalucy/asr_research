@@ -1,0 +1,22 @@
+{
+  "key": "zhuang_prosody_svm_2011",
+  "page": "https://doi.org/10.1109/MEC.2011.6025684",
+  "pdf": "http://xplorestaging.ieee.org/ielx5/6020827/6025381/06025684.pdf?arnumber=6025684",
+  "expectedTitle": "An new speech recognition method based on prosodic analysis and SVM in Zhuang language",
+  "authors": [
+    "Yeqing Yin",
+    "Tao Tian"
+  ],
+  "date": "2011",
+  "doi": "10.1109/MEC.2011.6025684",
+  "status": "2011 IEEE MEC会议论文；题名、作者和出版记录已核实，摘要与全文未获得",
+  "priority": "A",
+  "use": "壮语ASR与韵律方法的已有先例；题名中的An new按原记录保留。不报告尚未核实的模型细节或性能。",
+  "metadataVerified": true,
+  "pdfUrl": "http://xplorestaging.ieee.org/ielx5/6020827/6025381/06025684.pdf?arnumber=6025684",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/zhuang_prosody_svm_2011_zhuang_prosody_svm_2011",
+  "retrievedAt": "2026-10-12T14:33:55.180Z",
+  "downloaded": false,
+  "title": "An new speech recognition method based on prosodic analysis and SVM in Zhuang language",
+  "error": "Error: Cannot download PDF: curl: (16) Error in the HTTP2 framing layer\ncurl: (56) The requested URL returned error: 418"
+}

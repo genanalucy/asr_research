@@ -1,0 +1,30 @@
+{
+  "key": "iu_mien_asr_retry",
+  "id": "2407.13292",
+  "version": "v2",
+  "expectedTitle": "Low-Resourced Speech Recognition for Iu Mien Language via Weakly-Supervised Phoneme-based Multilingual Pre-training",
+  "status": "ISCSLP 2024相关论文；下载arXiv v2公开版本",
+  "priority": "A",
+  "use": "最直接的勉语ASR先例；MightLJSpeech约9.7小时、9761句、单女性说话人。此次按原页面的Pre-training拼写修正题名后下载。",
+  "page": "https://arxiv.org/abs/2407.13292v2",
+  "pdfUrl": "https://arxiv.org/pdf/2407.13292v2",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2407.13292_iu_mien_asr_retry",
+  "retrievedAt": "2026-10-12T14:38:40.107Z",
+  "downloaded": true,
+  "title": "Low-Resourced Speech Recognition for Iu Mien Language via Weakly-Supervised Phoneme-based Multilingual Pre-training",
+  "authors": [
+    "Dong, Lukuan",
+    "Qin, Donghong",
+    "Bai, Fengbo",
+    "Song, Fanhua",
+    "Liu, Yan",
+    "Xu, Chen",
+    "Ou, Zhijian"
+  ],
+  "date": "2024/07/18",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2407.13292_iu_mien_asr_retry/paper.pdf",
+  "bytes": 271468,
+  "sha256": "69802350b0a59c932ef41d466b794b3fa591db64202fb2b95a085bc52c66500a",
+  "pages": 5,
+  "firstPageTitleMatch": true
+}

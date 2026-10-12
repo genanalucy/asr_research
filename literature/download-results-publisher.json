@@ -1,0 +1,72 @@
+[
+  {
+    "key": "cantonese_phoneme_augmentation",
+    "page": "https://www.mdpi.com/2073-8994/17/9/1478",
+    "pdf": "https://www.mdpi.com/2073-8994/17/9/1478/pdf",
+    "expectedTitle": "Phoneme-Aware Augmentation for Robust Cantonese ASR Under Low-Resource Conditions",
+    "authors": [
+      "Lusheng Zhang",
+      "Shie Wu",
+      "Zhongxun Wang"
+    ],
+    "date": "2025/09/08",
+    "doi": "10.3390/sym17091478",
+    "status": "Symmetry 2025, 17(9),1478正式论文；Crossref元数据和摘要已核实，全文未读",
+    "priority": "A",
+    "use": "phoneme-aware SpecAugment与边界感知增强的直接近邻；新方法必须与它区别，不能把边界内mask或轮廓保护单独作为新意。",
+    "metadataVerified": true,
+    "pdfUrl": "https://www.mdpi.com/2073-8994/17/9/1478/pdf",
+    "directory": "/Users/bb/myfiles/asr_rssearch/literature/cantonese_phoneme_augmentation_cantonese_phoneme_augmentation",
+    "retrievedAt": "2026-10-12T14:33:55.183Z",
+    "downloaded": false,
+    "pageWarning": "页面下载失败；使用已独立核实的题名与作者元数据：curl: (56) The requested URL returned error: 403\ncurl: (56) The requested URL returned error: 403",
+    "title": "Phoneme-Aware Augmentation for Robust Cantonese ASR Under Low-Resource Conditions",
+    "error": "Error: Cannot download PDF: curl: (56) The requested URL returned error: 403\ncurl: (56) The requested URL returned error: 403"
+  },
+  {
+    "key": "zhuang_prosody_svm_2011",
+    "page": "https://doi.org/10.1109/MEC.2011.6025684",
+    "pdf": "http://xplorestaging.ieee.org/ielx5/6020827/6025381/06025684.pdf?arnumber=6025684",
+    "expectedTitle": "An new speech recognition method based on prosodic analysis and SVM in Zhuang language",
+    "authors": [
+      "Yeqing Yin",
+      "Tao Tian"
+    ],
+    "date": "2011",
+    "doi": "10.1109/MEC.2011.6025684",
+    "status": "2011 IEEE MEC会议论文；题名、作者和出版记录已核实，摘要与全文未获得",
+    "priority": "A",
+    "use": "壮语ASR与韵律方法的已有先例；题名中的An new按原记录保留。不报告尚未核实的模型细节或性能。",
+    "metadataVerified": true,
+    "pdfUrl": "http://xplorestaging.ieee.org/ielx5/6020827/6025381/06025684.pdf?arnumber=6025684",
+    "directory": "/Users/bb/myfiles/asr_rssearch/literature/zhuang_prosody_svm_2011_zhuang_prosody_svm_2011",
+    "retrievedAt": "2026-10-12T14:33:55.180Z",
+    "downloaded": false,
+    "title": "An new speech recognition method based on prosodic analysis and SVM in Zhuang language",
+    "error": "Error: Cannot download PDF: curl: (16) Error in the HTTP2 framing layer\ncurl: (56) The requested URL returned error: 418"
+  },
+  {
+    "key": "zhuang_cn_s2tt_2026",
+    "page": "https://doi.org/10.1145/3838457.3838547",
+    "pdf": "https://dl.acm.org/doi/pdf/10.1145/3838457.3838547",
+    "expectedTitle": "Zhuang-CN S2TT: A Low-Resource Dataset for Zhuang End-to-End Speech-to-Text Translation",
+    "authors": [
+      "Haina Nong",
+      "Wenkang Chen",
+      "Xuejun Zhang"
+    ],
+    "date": "2026",
+    "doi": "10.1145/3838457.3838547",
+    "status": "2026 ACM出版记录；题名、作者与摘要已核实，全文未读",
+    "priority": "B",
+    "use": "壮语数据采集、切分和对齐验证参考；任务是语音到中文翻译，不是壮语原文ASR，不能直接混作ASR基准。",
+    "metadataVerified": true,
+    "pdfUrl": "https://dl.acm.org/doi/pdf/10.1145/3838457.3838547",
+    "directory": "/Users/bb/myfiles/asr_rssearch/literature/zhuang_cn_s2tt_2026_zhuang_cn_s2tt_2026",
+    "retrievedAt": "2026-10-12T14:34:15.494Z",
+    "downloaded": false,
+    "pageWarning": "页面下载失败；使用已独立核实的题名与作者元数据：curl: (56) The requested URL returned error: 403\ncurl: (56) The requested URL returned error: 403",
+    "title": "Zhuang-CN S2TT: A Low-Resource Dataset for Zhuang End-to-End Speech-to-Text Translation",
+    "error": "Error: Cannot download PDF: curl: (56) The requested URL returned error: 403\ncurl: (56) The requested URL returned error: 403"
+  }
+]

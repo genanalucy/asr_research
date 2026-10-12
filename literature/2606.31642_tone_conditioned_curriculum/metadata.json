@@ -1,0 +1,30 @@
+{
+  "key": "tone_conditioned_curriculum",
+  "id": "2606.31642",
+  "version": "v1",
+  "expectedTitle": "Tone-Conditioned Curriculum Learning for Low-Resource Bantu Speech Recognition",
+  "status": "arXiv v1；页面有Interspeech 2026相关DOI，正式版本待核实",
+  "priority": "B",
+  "use": "声调统计、课程学习和适配器的近邻；实际用整句F0统计而非人工词汇声调标签，没有独立TER。",
+  "page": "https://arxiv.org/abs/2606.31642v1",
+  "pdfUrl": "https://arxiv.org/pdf/2606.31642v1",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2606.31642_tone_conditioned_curriculum",
+  "retrievedAt": "2026-10-12T14:15:39.128Z",
+  "downloaded": true,
+  "title": "Tone-Conditioned Curriculum Learning for Low-Resource Bantu Speech Recognition",
+  "authors": [
+    "Mokgosi, Kesego",
+    "Marivate, Vukosi",
+    "Mundia, Sitwala",
+    "Netshifhefhe, Unarine",
+    "Mogale, Tsholofelo Hope",
+    "Sindane, Thapelo"
+  ],
+  "date": "2026/06/30",
+  "doi": "10.21437/Interspeech.2026-2905",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2606.31642_tone_conditioned_curriculum/paper.pdf",
+  "bytes": 383523,
+  "sha256": "18519fde4ea102c971e8a1356e644ad7fe50cb022017a8c80e239ceca9263abe",
+  "pages": 5,
+  "firstPageTitleMatch": true
+}

@@ -1,0 +1,39 @@
+# macOS and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Local environments and secrets
+.venv/
+venv/
+env/
+*.env
+.env*
+!.env.example
+
+# Audio, datasets, checkpoints, and generated experiment artifacts
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+checkpoints/
+datasets/
+data/
+outputs/
+results/
+logs/
+runs/
+
+# Downloaded full papers and extracted full-page text are kept locally.
+literature/**/paper.pdf
+literature/**/first-page.txt
+
+# Temporary files
+*.tmp
+*.temp
+*.swp

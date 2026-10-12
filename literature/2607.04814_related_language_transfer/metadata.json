@@ -1,0 +1,32 @@
+{
+  "key": "related_language_transfer",
+  "id": "2607.04814",
+  "version": "v2",
+  "expectedTitle": "Evaluating the Effect of Linguistic Relatedness on Cross-Lingual Transfer in Large Multilingual Automatic Speech Recognition",
+  "status": "arXiv v2 预印本；未核实正式发表版本",
+  "priority": "B",
+  "use": "跨语言迁移的反证与实验设计参考；结论针对辅助语顺序预适配，不是否定多语预训练或联合训练。",
+  "page": "https://arxiv.org/abs/2607.04814v2",
+  "pdfUrl": "https://arxiv.org/pdf/2607.04814v2",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2607.04814_related_language_transfer",
+  "retrievedAt": "2026-10-12T14:15:39.125Z",
+  "downloaded": true,
+  "title": "Evaluating the Effect of Linguistic Relatedness on Cross-Lingual Transfer in Large Multilingual Automatic Speech Recognition",
+  "authors": [
+    "Florian, Andrei",
+    "Amol, Cynthia Jayne",
+    "Ombaba, Hope Kerubo",
+    "Cui, Xiaoyu",
+    "Mwau, Boniface",
+    "Kamau, Biatus Maina",
+    "Wanzare, Lilian Diana Awuor",
+    "Fellbaum, Christiane",
+    "Buzaaba, Happy"
+  ],
+  "date": "2026/07/06",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2607.04814_related_language_transfer/paper.pdf",
+  "bytes": 2485850,
+  "sha256": "c862a1e93ad4ecb59553e421cd27d417f6191e5681540bace93d9ea6e0eb983c",
+  "pages": 15,
+  "firstPageTitleMatch": true
+}

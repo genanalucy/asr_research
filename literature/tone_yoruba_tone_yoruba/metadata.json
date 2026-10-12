@@ -1,0 +1,24 @@
+{
+  "key": "tone_yoruba",
+  "page": "https://aclanthology.org/2026.loreslm-1.14/",
+  "pdf": "https://aclanthology.org/2026.loreslm-1.14.pdf",
+  "expectedTitle": "Tone in Yoruba ASR: Evaluating the Impact of Tone Recognition on Transformer-Based ASR Models",
+  "status": "LoResLM 2026正式论文，ACL Anthology公开全文",
+  "date": "2026",
+  "authors": [
+    "Joy Olusanya"
+  ],
+  "priority": "B",
+  "use": "声调标记、正字法和评价指标的边界案例；不能假设显式标调必然改善ASR，更不能直接外推到壮语/瑶语。",
+  "metadataVerified": true,
+  "pdfUrl": "https://aclanthology.org/2026.loreslm-1.14.pdf",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/tone_yoruba_tone_yoruba",
+  "retrievedAt": "2026-10-12T14:33:53.420Z",
+  "downloaded": true,
+  "title": "Tone in Yoruba ASR: Evaluating the Impact of Tone Recognition on Transformer-Based ASR Models",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/tone_yoruba_tone_yoruba/paper.pdf",
+  "bytes": 455505,
+  "sha256": "83b454b7e8a400c0d612e70efa3802605cb24e9fcf4e16c1b9cae4269cd5de1c",
+  "pages": 8,
+  "firstPageTitleMatch": true
+}

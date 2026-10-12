@@ -1,0 +1,5 @@
+Zhuang-CN S2TT: A Low-Resource Dataset for Zhuang End-to-End Speech-to-Text Translation
+https://doi.org/10.1145/3838457.3838547
+https://dl.acm.org/doi/pdf/10.1145/3838457.3838547
+Error: Cannot download PDF: curl: (56) The requested URL returned error: 403
+curl: (56) The requested URL returned error: 403

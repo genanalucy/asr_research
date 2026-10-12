@@ -1,0 +1,28 @@
+{
+  "key": "whisper",
+  "id": "2212.04356",
+  "expectedTitle": "Robust Speech Recognition via Large-Scale Weak Supervision",
+  "status": "先下载arXiv公开版本；正式会议版本信息将在总目录核对",
+  "priority": "A",
+  "use": "Whisper基础论文：模型训练、语言覆盖、低资源和跨域识别背景；必须引用的主干基线文献。",
+  "page": "https://arxiv.org/abs/2212.04356",
+  "pdfUrl": "https://arxiv.org/pdf/2212.04356",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2212.04356_whisper",
+  "retrievedAt": "2026-10-12T14:18:12.178Z",
+  "downloaded": true,
+  "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+  "authors": [
+    "Radford, Alec",
+    "Kim, Jong Wook",
+    "Xu, Tao",
+    "Brockman, Greg",
+    "McLeavey, Christine",
+    "Sutskever, Ilya"
+  ],
+  "date": "2022/12/06",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2212.04356_whisper/paper.pdf",
+  "bytes": 1008644,
+  "sha256": "6337bde031b2f237547a977b022f831169a7e05b4d9047f29501166d83594566",
+  "pages": 28,
+  "firstPageTitleMatch": true
+}

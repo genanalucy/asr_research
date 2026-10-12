@@ -1,0 +1,26 @@
+{
+  "key": "phoneme_level_analysis",
+  "id": "2604.18204",
+  "version": "v1",
+  "expectedTitle": "Hard to Be Heard: Phoneme-Level ASR Analysis of Phonologically Complex, Low-Resource Endangered Languages",
+  "status": "arXiv v1；页面注明 Accepted to ACL 2026 Findings，正式出版记录待核实",
+  "priority": "B",
+  "use": "低资源语音识别的音素错误分析与训练频次机制；不能仅把少见语言或音系复杂性当作方法创新。",
+  "page": "https://arxiv.org/abs/2604.18204v1",
+  "pdfUrl": "https://arxiv.org/pdf/2604.18204v1",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2604.18204_phoneme_level_analysis",
+  "retrievedAt": "2026-10-12T14:15:44.448Z",
+  "downloaded": true,
+  "title": "Hard to Be Heard: Phoneme-Level ASR Analysis of Phonologically Complex, Low-Resource Endangered Languages",
+  "authors": [
+    "Akavarapu, V. S. D. S. Mahesh",
+    "Daniel, Michael",
+    "Jäger, Gerhard"
+  ],
+  "date": "2026/04/20",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2604.18204_phoneme_level_analysis/paper.pdf",
+  "bytes": 8160166,
+  "sha256": "4980d1f74a7a4f3814b7d5b4c585a27d7eb7e642ceeea9d0c8dbbe23d82f462b",
+  "pages": 15,
+  "firstPageTitleMatch": true
+}

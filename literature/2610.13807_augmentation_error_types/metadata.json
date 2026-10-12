@@ -1,0 +1,25 @@
+{
+  "key": "augmentation_error_types",
+  "id": "2610.13807",
+  "version": "v1",
+  "expectedTitle": "Error Rate is Not Enough: Costs of Augmentation in Low-Resource ASR",
+  "status": "arXiv v1 预印本（2026-10-09）；未见正式发表信息",
+  "priority": "A",
+  "use": "数据增强与细粒度错误分析；声调结果仅来自Kakabe，单独SpecAugment的声调错误增加不显著，不可推广为壮瑶语必然现象。",
+  "page": "https://arxiv.org/abs/2610.13807v1",
+  "pdfUrl": "https://arxiv.org/pdf/2610.13807v1",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2610.13807_augmentation_error_types",
+  "retrievedAt": "2026-10-12T14:15:23.910Z",
+  "downloaded": true,
+  "title": "Error Rate is Not Enough: Costs of Augmentation in Low-Resource ASR",
+  "authors": [
+    "Ibaraki, Katsumi",
+    "Chiang, David"
+  ],
+  "date": "2026/10/09",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2610.13807_augmentation_error_types/paper.pdf",
+  "bytes": 204643,
+  "sha256": "441d86c4be51248e7792d6d34496dc77c722f51c91009dda6aeee2b4d53ff29e",
+  "pages": 5,
+  "firstPageTitleMatch": true
+}

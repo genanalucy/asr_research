@@ -1,0 +1,24 @@
+{
+  "key": "explicit_tone_bribri",
+  "page": "https://aclanthology.org/2021.americasnlp-1.20/",
+  "pdf": "https://aclanthology.org/2021.americasnlp-1.20.pdf",
+  "expectedTitle": "Explicit Tone Transcription Improves ASR Performance in Extremely Low-Resource Languages: A Case Study in Bribri",
+  "status": "AmericasNLP 2021正式论文，ACL Anthology公开全文",
+  "date": "2021",
+  "authors": [
+    "Rolando Coto-Solano"
+  ],
+  "priority": "A",
+  "use": "显式声调转写/将声调与元音分开建模的早期先例；不能把声调分解本身宣称首创。",
+  "metadataVerified": true,
+  "pdfUrl": "https://aclanthology.org/2021.americasnlp-1.20.pdf",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/explicit_tone_bribri_explicit_tone_bribri",
+  "retrievedAt": "2026-10-12T14:33:53.421Z",
+  "downloaded": true,
+  "title": "Explicit Tone Transcription Improves ASR Performance in Extremely Low-Resource Languages: A Case Study in Bribri",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/explicit_tone_bribri_explicit_tone_bribri/paper.pdf",
+  "bytes": 524338,
+  "sha256": "f0f6b9ac7058325793bafde98441d768fd26f2ecf1b003cc38132291e5c232fc",
+  "pages": 12,
+  "firstPageTitleMatch": true
+}

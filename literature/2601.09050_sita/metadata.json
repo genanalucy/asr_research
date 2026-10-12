@@ -1,0 +1,29 @@
+{
+  "key": "sita",
+  "id": "2601.09050",
+  "expectedTitle": "SITA: Learning Speaker-Invariant and Tone-Aware Speech Representations for Low-Resource Tonal Languages",
+  "status": "2026-01-14 arXiv预印本；未核实正式发表地点",
+  "priority": "A",
+  "use": "说话人不变与声调敏感表示学习的直接近邻；同词异调的tone-repulsive loss已有先例。",
+  "page": "https://arxiv.org/abs/2601.09050",
+  "pdfUrl": "https://arxiv.org/pdf/2601.09050",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2601.09050_sita",
+  "retrievedAt": "2026-10-12T14:34:03.694Z",
+  "downloaded": true,
+  "title": "SITA: Learning Speaker-Invariant and Tone-Aware Speech Representations for Low-Resource Tonal Languages",
+  "authors": [
+    "Xu, Tianyi",
+    "Ouyang, Xuan",
+    "Yao, Binwei",
+    "Xiong, Shoua",
+    "Misurelli, Sara",
+    "Lor, Maichou",
+    "Hu, Junjie"
+  ],
+  "date": "2026/01/14",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2601.09050_sita/paper.pdf",
+  "bytes": 1486201,
+  "sha256": "b00ce0ef849276349913d047c640701b36627d08d76f45001b8c239b9f6782a5",
+  "pages": 20,
+  "firstPageTitleMatch": true
+}

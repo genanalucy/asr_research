@@ -1,0 +1,14 @@
+{
+  "key": "hawaiian_lm",
+  "id": "2404.03073",
+  "expectedTitle": "Mai Ho'omāuna i ka 'Ai: Language Models Improve Automatic Speech Recognition in Hawaiian",
+  "status": "2024 arXiv预印本；未核实正式发表地点",
+  "priority": "B",
+  "use": "低资源语言外部语言模型重打分的直接先例；LM重打分本身不是新贡献。",
+  "page": "https://arxiv.org/abs/2404.03073",
+  "pdfUrl": "https://arxiv.org/pdf/2404.03073",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2404.03073_hawaiian_lm",
+  "retrievedAt": "2026-10-12T14:34:06.816Z",
+  "downloaded": false,
+  "error": "Error: Title mismatch: page reports Mai Ho'om\\=auna i ka 'Ai: Language Models Improve Automatic Speech Recognition in Hawaiian"
+}

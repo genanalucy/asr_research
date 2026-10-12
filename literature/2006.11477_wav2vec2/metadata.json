@@ -1,0 +1,26 @@
+{
+  "key": "wav2vec2",
+  "id": "2006.11477",
+  "expectedTitle": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+  "status": "先下载arXiv公开版本；正式会议版本信息将在总目录核对",
+  "priority": "B",
+  "use": "自监督预训练、低标注量ASR和CTC训练的基础方法文献。",
+  "page": "https://arxiv.org/abs/2006.11477",
+  "pdfUrl": "https://arxiv.org/pdf/2006.11477",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2006.11477_wav2vec2",
+  "retrievedAt": "2026-10-12T14:18:15.626Z",
+  "downloaded": true,
+  "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+  "authors": [
+    "Baevski, Alexei",
+    "Zhou, Henry",
+    "Mohamed, Abdelrahman",
+    "Auli, Michael"
+  ],
+  "date": "2020/06/20",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2006.11477_wav2vec2/paper.pdf",
+  "bytes": 740863,
+  "sha256": "4a881708378143547a5c053f62090104afb49782a4c71d78441dde0a818758ff",
+  "pages": 19,
+  "firstPageTitleMatch": true
+}

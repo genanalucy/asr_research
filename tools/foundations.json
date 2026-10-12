@@ -1,0 +1,6 @@
+[
+  {"key":"whisper","id":"2212.04356","expectedTitle":"Robust Speech Recognition via Large-Scale Weak Supervision","status":"先下载arXiv公开版本；正式会议版本信息将在总目录核对","priority":"A","use":"Whisper基础论文：模型训练、语言覆盖、低资源和跨域识别背景；必须引用的主干基线文献。"},
+  {"key":"xls_r","id":"2111.09296","expectedTitle":"XLS-R: Self-supervised Cross-lingual Speech Representation Learning at Scale","status":"先下载arXiv公开版本；正式会议版本信息将在总目录核对","priority":"A","use":"跨语言自监督语音表示与CTC微调基线；比较预训练主干而非只用Whisper。"},
+  {"key":"mms","id":"2305.13516","expectedTitle":"Scaling Speech Technology to 1,000+ Languages","status":"先下载arXiv公开版本；正式会议版本信息将在总目录核对","priority":"A","use":"MMS大规模语言覆盖与低资源ASR基线；语言是否覆盖需查官方语种清单，不能由民族名称推断。"},
+  {"key":"wav2vec2","id":"2006.11477","expectedTitle":"wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations","status":"先下载arXiv公开版本；正式会议版本信息将在总目录核对","priority":"B","use":"自监督预训练、低标注量ASR和CTC训练的基础方法文献。"}
+]

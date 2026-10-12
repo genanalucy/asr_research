@@ -1,0 +1,5 @@
+An new speech recognition method based on prosodic analysis and SVM in Zhuang language
+https://doi.org/10.1109/MEC.2011.6025684
+http://xplorestaging.ieee.org/ielx5/6020827/6025381/06025684.pdf?arnumber=6025684
+Error: Cannot download PDF: curl: (16) Error in the HTTP2 framing layer
+curl: (56) The requested URL returned error: 418

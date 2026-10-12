@@ -1,0 +1,32 @@
+[
+  {
+    "key": "whisper_icml2023",
+    "expectedTitle": "Robust Speech Recognition via Large-Scale Weak Supervision",
+    "page": "https://proceedings.mlr.press/v202/radford23a.html",
+    "pdf": "https://proceedings.mlr.press/v202/radford23a/radford23a.pdf",
+    "date": "2023/07/03",
+    "status": "ICML 2023正式论文，PMLR 202:28492–28518；已核对官方会议页面",
+    "priority": "A",
+    "use": "Whisper优先引用版本。与2212.04356的arXiv下载属于同一篇论文，不应作为两篇文献重复计数。",
+    "venue": "Proceedings of the 40th International Conference on Machine Learning",
+    "volume": "202",
+    "pages": 27,
+    "pdfUrl": "https://proceedings.mlr.press/v202/radford23a/radford23a.pdf",
+    "directory": "/Users/bb/myfiles/asr_rssearch/literature/whisper_icml2023_whisper_icml2023",
+    "retrievedAt": "2026-10-12T14:20:07.466Z",
+    "downloaded": true,
+    "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+    "authors": [
+      "Alec Radford",
+      "Jong Wook Kim",
+      "Tao Xu",
+      "Greg Brockman",
+      "Christine Mcleavey",
+      "Ilya Sutskever"
+    ],
+    "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/whisper_icml2023_whisper_icml2023/paper.pdf",
+    "bytes": 823459,
+    "sha256": "84496ed07ac01bf3d00866a1934f81173ddbba99f7488de59bb8ae3b28f0f85e",
+    "firstPageTitleMatch": true
+  }
+]

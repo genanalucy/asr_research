@@ -1,0 +1,15 @@
+{
+  "key": "tone_sandhi",
+  "id": "2609.18194",
+  "version": "v1",
+  "expectedTitle": "T-SANDHI: Tone Sandhi-aware Adaptive Network with Decoupled Hybrid Injection for Low-resource Taiwanese Hokkien Speech Recognition",
+  "status": "arXiv v1；论文页注明 Accepted to IEEE SLT 2026，未核实正式出版版本",
+  "priority": "A",
+  "use": "声调/音节辅助任务的直接近邻；避免将普通声调多任务和门控融合误称全新。",
+  "page": "https://arxiv.org/abs/2609.18194v1",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18194v1",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2609.18194_tone_sandhi",
+  "retrievedAt": "2026-10-12T14:15:23.918Z",
+  "downloaded": false,
+  "error": "Error: Cannot retrieve paper page: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to arxiv.org:443"
+}

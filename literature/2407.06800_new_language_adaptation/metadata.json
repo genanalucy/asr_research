@@ -1,0 +1,28 @@
+{
+  "key": "new_language_adaptation",
+  "id": "2407.06800",
+  "expectedTitle": "Learn and Don't Forget: Adding a New Language to ASR Foundation Models",
+  "status": "Interspeech 2024，DOI 10.21437/Interspeech.2024-1045；下载arXiv公开版本",
+  "priority": "A",
+  "use": "新增语言适配、soft language code、soft prompt、LoRA、全量微调与遗忘权衡；普通加语言token或LoRA不是新方法。",
+  "page": "https://arxiv.org/abs/2407.06800",
+  "pdfUrl": "https://arxiv.org/pdf/2407.06800",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2407.06800_new_language_adaptation",
+  "retrievedAt": "2026-10-12T14:34:03.695Z",
+  "downloaded": true,
+  "title": "Learn and Don't Forget: Adding a New Language to ASR Foundation Models",
+  "authors": [
+    "Qian, Mengjie",
+    "Tang, Siyuan",
+    "Ma, Rao",
+    "Knill, Kate M.",
+    "Gales, Mark J. F."
+  ],
+  "date": "2024/07/09",
+  "doi": "10.21437/Interspeech.2024-1045",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2407.06800_new_language_adaptation/paper.pdf",
+  "bytes": 383553,
+  "sha256": "aff1b347938f645e7506f0db9f4ab22e6185811d43181a5a7d66686a2f8c7f62",
+  "pages": 6,
+  "firstPageTitleMatch": true
+}

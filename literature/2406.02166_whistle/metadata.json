@@ -1,0 +1,29 @@
+{
+  "key": "whistle",
+  "id": "2406.02166",
+  "version": "v2",
+  "expectedTitle": "Whistle: Data-Efficient Multilingual and Crosslingual Speech Recognition via Weakly Phonetic Supervision",
+  "status": "arXiv公开版本；调研核实有2025 IEEE TASLP发表记录，最终引用优先核对正式版",
+  "priority": "A",
+  "use": "弱音素监督、IPA桥接与多语言预训练的核心先例；勉语论文使用这条路线。",
+  "page": "https://arxiv.org/abs/2406.02166v2",
+  "pdfUrl": "https://arxiv.org/pdf/2406.02166v2",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2406.02166_whistle",
+  "retrievedAt": "2026-10-12T14:33:48.428Z",
+  "downloaded": true,
+  "title": "Whistle: Data-Efficient Multilingual and Crosslingual Speech Recognition via Weakly Phonetic Supervision",
+  "authors": [
+    "Yusuyin, Saierdaer",
+    "Ma, Te",
+    "Huang, Hao",
+    "Zhao, Wenbo",
+    "Ou, Zhijian"
+  ],
+  "date": "2024/06/04",
+  "doi": "10.1109/TASLPRO.2025.3550683",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2406.02166_whistle/paper.pdf",
+  "bytes": 2847155,
+  "sha256": "e8ce573a65acae38e0e90c149d27b8f3946bf8edb3f216af3df16c46e6e98e66",
+  "pages": 14,
+  "firstPageTitleMatch": true
+}

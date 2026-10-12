@@ -1,0 +1,7 @@
+[
+  {"key":"tone_sandhi","id":"2609.18194","version":"v1","expectedTitle":"T-SANDHI: Tone Sandhi-aware Adaptive Network with Decoupled Hybrid Injection for Low-resource Taiwanese Hokkien Speech Recognition","status":"arXiv v1；论文页注明 Accepted to IEEE SLT 2026，未核实正式出版版本","priority":"A","use":"声调/音节辅助任务的直接近邻；避免将普通声调多任务和门控融合误称全新。"},
+  {"key":"augmentation_error_types","id":"2610.13807","version":"v1","expectedTitle":"Error Rate is Not Enough: Costs of Augmentation in Low-Resource ASR","status":"arXiv v1 预印本（2026-10-09）；未见正式发表信息","priority":"A","use":"数据增强与细粒度错误分析；声调结果仅来自Kakabe，单独SpecAugment的声调错误增加不显著，不可推广为壮瑶语必然现象。"},
+  {"key":"related_language_transfer","id":"2607.04814","version":"v2","expectedTitle":"Evaluating the Effect of Linguistic Relatedness on Cross-Lingual Transfer in Large Multilingual Automatic Speech Recognition","status":"arXiv v2 预印本；未核实正式发表版本","priority":"B","use":"跨语言迁移的反证与实验设计参考；结论针对辅助语顺序预适配，不是否定多语预训练或联合训练。"},
+  {"key":"tone_conditioned_curriculum","id":"2606.31642","version":"v1","expectedTitle":"Tone-Conditioned Curriculum Learning for Low-Resource Bantu Speech Recognition","status":"arXiv v1；页面有Interspeech 2026相关DOI，正式版本待核实","priority":"B","use":"声调统计、课程学习和适配器的近邻；实际用整句F0统计而非人工词汇声调标签，没有独立TER。"},
+  {"key":"phoneme_level_analysis","id":"2604.18204","version":"v1","expectedTitle":"Hard to Be Heard: Phoneme-Level ASR Analysis of Phonologically Complex, Low-Resource Endangered Languages","status":"arXiv v1；页面注明 Accepted to ACL 2026 Findings，正式出版记录待核实","priority":"B","use":"低资源语音识别的音素错误分析与训练频次机制；不能仅把少见语言或音系复杂性当作方法创新。"}
+]

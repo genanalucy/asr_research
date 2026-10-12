@@ -1,0 +1,26 @@
+{
+  "key": "whisper_lm",
+  "id": "2503.23542",
+  "expectedTitle": "Whisper-LM: Improving ASR Models with Language Models for Low-Resource Languages",
+  "status": "2025 arXiv预印本；论文页只称拟投稿TASLP，不能当作已接收发表",
+  "priority": "B",
+  "use": "统计LM与LLM辅助Whisper的低资源识别比较；用于评估是否真的有必要用大语言模型。",
+  "page": "https://arxiv.org/abs/2503.23542",
+  "pdfUrl": "https://arxiv.org/pdf/2503.23542",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2503.23542_whisper_lm",
+  "retrievedAt": "2026-10-12T14:34:15.025Z",
+  "downloaded": true,
+  "title": "Whisper-LM: Improving ASR Models with Language Models for Low-Resource Languages",
+  "authors": [
+    "de Zuazo, Xabier",
+    "Navas, Eva",
+    "Saratxaga, Ibon",
+    "Rioja, Inma Hernáez"
+  ],
+  "date": "2025/03/30",
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2503.23542_whisper_lm/paper.pdf",
+  "bytes": 614248,
+  "sha256": "a971d10055aff196b5c8da00d1949abb97b63b132ae8261549ea20c03816517b",
+  "pages": 26,
+  "firstPageTitleMatch": true
+}
