@@ -1,0 +1,26 @@
+{
+  "src": "/tmp/asr_review/2026.africanlp-main.14.pdf",
+  "key": "2026_africanlp_linguistic_eval",
+  "title": "Linguistically Informed Evaluation of Multilingual ASR for African Languages",
+  "authors": [
+    "Chen",
+    "Adeleke",
+    "Downey"
+  ],
+  "year": "2026",
+  "doi": "10.18653/v1/2026.africanlp-main.14",
+  "page": "https://aclanthology.org/2026.africanlp-main.14/",
+  "pdfUrl": "https://aclanthology.org/2026.africanlp-main.14.pdf",
+  "use": "FER/Tone Error Rate与WER/CER并列的核心评测近邻；适合构造壮语/瑶语音系错误分析。",
+  "downloaded": true,
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2026_africanlp_linguistic_eval/paper.pdf",
+  "bytes": 266741,
+  "sha256": "66f7996a8f4dd52c49b231eb8c990e2e857d884408b56356d25a589fc892dc19",
+  "pages": 14,
+  "retrievedAt": "2026-10-13",
+  "status": "公开全文已下载并核验PDF签名",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2026_africanlp_linguistic_eval",
+  "firstPageTitleMatch": true,
+  "priority": "A",
+  "date": "2026"
+}

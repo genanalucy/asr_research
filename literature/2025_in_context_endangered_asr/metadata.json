@@ -1,0 +1,25 @@
+{
+  "src": "/tmp/asr_review/2505.20445.pdf",
+  "key": "2025_in_context_endangered_asr",
+  "title": "In-context Language Learning for Endangered Languages in Speech Recognition",
+  "authors": [
+    "Li",
+    "Niehues"
+  ],
+  "year": "2025",
+  "doi": "10.21437/Interspeech.2025-2626",
+  "page": "https://arxiv.org/abs/2505.20445",
+  "pdfUrl": "https://arxiv.org/pdf/2505.20445",
+  "use": "MMS n-best与目标语文本重排序；若走外部LM/文本适配路线，必须做公平基线。",
+  "downloaded": true,
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2025_in_context_endangered_asr/paper.pdf",
+  "bytes": 154471,
+  "sha256": "451a24fd7d025bbda54b57cf8b9bab7bef7b1b1c364b54d8482a4fd9fadead9d",
+  "pages": 6,
+  "retrievedAt": "2026-10-13",
+  "status": "公开全文已下载并核验PDF签名",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2025_in_context_endangered_asr",
+  "firstPageTitleMatch": true,
+  "priority": "A",
+  "date": "2025"
+}

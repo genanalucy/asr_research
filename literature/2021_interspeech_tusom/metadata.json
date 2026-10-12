@@ -1,0 +1,27 @@
+{
+  "src": "/tmp/asr_rssearch_bib_audit/tusom2021_interspeech.pdf",
+  "key": "2021_interspeech_tusom",
+  "title": "Tusom2021: A Phonetically Transcribed Speech Dataset from an Endangered Language for Universal Phone Recognition Experiments",
+  "authors": [
+    "Mortensen",
+    "Hjortnaes",
+    "Hjortnaes",
+    "Michaud"
+  ],
+  "year": "2021",
+  "doi": "10.21437/Interspeech.2021-1435",
+  "page": "https://www.isca-archive.org/interspeech_2021/mortensen21_interspeech.html",
+  "pdfUrl": "https://www.isca-archive.org/interspeech_2021/mortensen21_interspeech.pdf",
+  "use": "濒危语言音素标注、跨语言phone recognition和声调背景参考。",
+  "downloaded": true,
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2021_interspeech_tusom/paper.pdf",
+  "bytes": 282114,
+  "sha256": "64fd5ebc6a07d4f926c5fffe1dc18c5be5785f541132d7e5da14fe11cbaa7258",
+  "pages": 5,
+  "retrievedAt": "2026-10-13",
+  "status": "公开全文已下载并核验PDF签名",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2021_interspeech_tusom",
+  "firstPageTitleMatch": true,
+  "priority": "A",
+  "date": "2021"
+}

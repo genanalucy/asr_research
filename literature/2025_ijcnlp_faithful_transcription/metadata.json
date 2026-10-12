@@ -1,0 +1,26 @@
+{
+  "src": "/tmp/asr_rssearch_bib_audit/faithful_transcription2025_ijcnlp.pdf",
+  "key": "2025_ijcnlp_faithful_transcription",
+  "title": "Faithful Transcription: Leveraging Bible Recordings for Low-Resource ASR",
+  "authors": [
+    "Le Ferrand",
+    "Michaud",
+    "Adams"
+  ],
+  "year": "2025",
+  "doi": "10.18653/v1/2025.ijcnlp-short.28",
+  "page": "https://aclanthology.org/2025.ijcnlp-short.28/",
+  "pdfUrl": "https://aclanthology.org/2025.ijcnlp-short.28.pdf",
+  "use": "朗读域与自然会话域差异；支持域外测试和语料风格控制。",
+  "downloaded": true,
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2025_ijcnlp_faithful_transcription/paper.pdf",
+  "bytes": 481023,
+  "sha256": "563cfb4e5c12559943d10bb249456711b72d3c7f720499b0f80779d3d464dac4",
+  "pages": 10,
+  "retrievedAt": "2026-10-13",
+  "status": "公开全文已下载并核验PDF签名",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2025_ijcnlp_faithful_transcription",
+  "firstPageTitleMatch": true,
+  "priority": "A",
+  "date": "2025"
+}

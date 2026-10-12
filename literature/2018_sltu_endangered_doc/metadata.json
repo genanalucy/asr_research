@@ -1,0 +1,26 @@
+{
+  "src": "/tmp/asr_rssearch_bib_audit/jimerson2018_sltu.pdf",
+  "key": "2018_sltu_endangered_doc",
+  "title": "Improving ASR Output for Endangered Language Documentation",
+  "authors": [
+    "Jimerson",
+    "Harrigan",
+    "Black"
+  ],
+  "year": "2018",
+  "doi": "10.21437/SLTU.2018-39",
+  "page": "https://www.isca-archive.org/sltu_2018/jimerson18_sltu.html",
+  "pdfUrl": "https://www.isca-archive.org/sltu_2018/jimerson18_sltu.pdf",
+  "use": "ASR输出后处理、词典与语言文档工作流背景；适合讨论实用价值。",
+  "downloaded": true,
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2018_sltu_endangered_doc/paper.pdf",
+  "bytes": 236774,
+  "sha256": "da528f89305144a165d902f12881ba5d35a3c857767d55ff921d201df9275db6",
+  "pages": 5,
+  "retrievedAt": "2026-10-13",
+  "status": "公开全文已下载并核验PDF签名",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2018_sltu_endangered_doc",
+  "firstPageTitleMatch": true,
+  "priority": "A",
+  "date": "2018"
+}

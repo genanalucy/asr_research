@@ -1,0 +1,24 @@
+{
+  "src": "/tmp/asr_review/2412.04717.pdf",
+  "key": "2024_nolor_neo_aramaic",
+  "title": "NoLoR: An ASR-Based Framework for Expedited Endangered Language Documentation with Neo-Aramaic as a Case Study",
+  "authors": [
+    "Nazari"
+  ],
+  "year": "2024",
+  "doi": "",
+  "page": "https://arxiv.org/abs/2412.04717",
+  "pdfUrl": "https://arxiv.org/pdf/2412.04717",
+  "use": "ASR辅助语言文档与人机协作效率；若讨论实用影响可引用，不作为主模型近邻。",
+  "downloaded": true,
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2024_nolor_neo_aramaic/paper.pdf",
+  "bytes": 1451124,
+  "sha256": "1bb25a9b72c3dfd6a1cc02642bd0d241da7a525973b79e09df8c3ad5b11ee16d",
+  "pages": 6,
+  "retrievedAt": "2026-10-13",
+  "status": "公开全文已下载并核验PDF签名",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2024_nolor_neo_aramaic",
+  "firstPageTitleMatch": true,
+  "priority": "A",
+  "date": "2024"
+}

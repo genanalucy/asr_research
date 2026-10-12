@@ -1,0 +1,26 @@
+{
+  "src": "/tmp/asr_review/2603.26248.pdf",
+  "key": "2026_lrec_ikema",
+  "title": "Automatic Speech Recognition for Documenting Endangered Languages: Case Study of Ikema Miyakoan",
+  "authors": [
+    "Taguchi",
+    "Takubo",
+    "Chiang"
+  ],
+  "year": "2026",
+  "doi": "10.63317/4im4f6vuxk42",
+  "page": "https://arxiv.org/abs/2603.26248",
+  "pdfUrl": "https://arxiv.org/pdf/2603.26248",
+  "use": "多说话人濒危语言、正字法比较和ASR辅助标注效率；用于设计外推与实用评测。",
+  "downloaded": true,
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2026_lrec_ikema/paper.pdf",
+  "bytes": 899064,
+  "sha256": "21d140648686efa3a725a771defd4ee6c0d7fcc137ff8024b2517d4a443e7982",
+  "pages": 9,
+  "retrievedAt": "2026-10-13",
+  "status": "公开全文已下载并核验PDF签名",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2026_lrec_ikema",
+  "firstPageTitleMatch": true,
+  "priority": "A",
+  "date": "2026"
+}

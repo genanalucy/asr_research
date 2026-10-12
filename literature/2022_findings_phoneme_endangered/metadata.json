@@ -1,0 +1,24 @@
+{
+  "src": "/tmp/asr_rssearch_bib_audit/phoneme_endangered2022_acl.pdf",
+  "key": "2022_findings_phoneme_endangered",
+  "title": "Phoneme transcription of endangered languages: A comparative study of architectures and data regimes",
+  "authors": [
+    "Boulianne"
+  ],
+  "year": "2022",
+  "doi": "10.18653/v1/2022.findings-acl.180",
+  "page": "https://aclanthology.org/2022.findings-acl.180/",
+  "pdfUrl": "https://aclanthology.org/2022.findings-acl.180.pdf",
+  "use": "多种濒危语言、短时长和PER/架构比较；支持音素级错误诊断与数据规模实验。",
+  "downloaded": true,
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2022_findings_phoneme_endangered/paper.pdf",
+  "bytes": 286801,
+  "sha256": "482f0799a5f18f288c99da5e6d6cc03dcbf4dabc77405d7d8b07bb9a7dfb5394",
+  "pages": 8,
+  "retrievedAt": "2026-10-13",
+  "status": "公开全文已下载并核验PDF签名",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2022_findings_phoneme_endangered",
+  "firstPageTitleMatch": true,
+  "priority": "A",
+  "date": "2022"
+}

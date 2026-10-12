@@ -1,0 +1,27 @@
+{
+  "src": "/tmp/asr_review/2024.fieldmatters-1.2.pdf",
+  "key": "2024_fieldmatters_manchu",
+  "title": "ManWav: The First Manchu ASR Model",
+  "authors": [
+    "Seo",
+    "Lee",
+    "Kim",
+    "Lee"
+  ],
+  "year": "2024",
+  "doi": "10.18653/v1/2024.fieldmatters-1.2",
+  "page": "https://aclanthology.org/2024.fieldmatters-1.2/",
+  "pdfUrl": "https://aclanthology.org/2024.fieldmatters-1.2.pdf",
+  "use": "极低资源ASR、音系错误和增强实验的参考；明确报告说话人限制。",
+  "downloaded": true,
+  "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/2024_fieldmatters_manchu/paper.pdf",
+  "bytes": 118324,
+  "sha256": "dd7c5425829d62ec7c5cf739bb04ebb09e7de344a16d439a93ce8a25913f535c",
+  "pages": 6,
+  "retrievedAt": "2026-10-13",
+  "status": "公开全文已下载并核验PDF签名",
+  "directory": "/Users/bb/myfiles/asr_rssearch/literature/2024_fieldmatters_manchu",
+  "firstPageTitleMatch": true,
+  "priority": "A",
+  "date": "2024"
+}
