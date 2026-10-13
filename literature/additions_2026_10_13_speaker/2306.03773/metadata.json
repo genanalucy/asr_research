@@ -1,0 +1,14 @@
+{
+  "title": "Some Voices are Too Common: Building Fair Speech Recognition Systems Using the CommonVoice Dataset",
+  "authors": ["Lucas Maison", "Yannick Estève"],
+  "year": 2023,
+  "venue": "INTERSPEECH 2023",
+  "doi": "10.21437/Interspeech.2023-2124",
+  "arxiv": "https://arxiv.org/abs/2306.03773",
+  "officialBib": "https://arxiv.org/bibtex/2306.03773",
+  "pdf": "paper.pdf",
+  "pages": 5,
+  "coverage": "full text",
+  "screening": "Near neighbor: fixed-size French Common Voice training sets, equalized speaker count for comparisons, and a high-diversity condition.",
+  "status": "downloaded 2026-10-13"
+}

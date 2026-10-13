@@ -1,0 +1,14 @@
+{
+  "title": "More Speaking or More Speakers?",
+  "authors": ["Dan Berrebbi", "Ronan Collobert", "Navdeep Jaitly", "Tatiana Likhomanenko"],
+  "year": 2023,
+  "venue": "ICASSP 2023",
+  "doi": "10.1109/ICASSP49357.2023.10096078",
+  "arxiv": "https://arxiv.org/abs/2211.00854",
+  "officialBib": "https://arxiv.org/bibtex/2211.00854",
+  "pdf": "paper.pdf",
+  "pages": 8,
+  "coverage": "full text",
+  "screening": "A direct neighbor: LibriSpeech subsets vary labeled and unlabeled hours and speaker counts for supervised, SSL, and self-training ASR.",
+  "status": "downloaded 2026-10-13"
+}

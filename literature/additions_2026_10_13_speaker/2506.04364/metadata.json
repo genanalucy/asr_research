@@ -1,0 +1,13 @@
+{
+  "title": "Effects of Speaker Count, Duration, and Accent Diversity on Zero-Shot Accent Robustness in Low-Resource ASR",
+  "authors": ["Zheng-Xin Yong", "Vineel Pratap", "Michael Auli", "Jean Maillard"],
+  "year": 2025,
+  "venue": "INTERSPEECH 2025",
+  "arxiv": "https://arxiv.org/abs/2506.04364",
+  "officialBib": "https://arxiv.org/bibtex/2506.04364",
+  "pdf": "paper.pdf",
+  "pages": 5,
+  "coverage": "full text",
+  "screening": "A direct neighbor: fixed total hours while varying speaker count, fixed speaker count while varying per-speaker duration, and controlled accent diversity.",
+  "status": "downloaded 2026-10-13"
+}

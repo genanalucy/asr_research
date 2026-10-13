@@ -1,0 +1,14 @@
+{
+  "title": "Investigating Data Partitioning Strategies for Crosslinguistic Low-Resource ASR Evaluation",
+  "authors": ["Zoey Liu", "Justin Spence", "Emily Prud'hommeaux"],
+  "year": 2023,
+  "venue": "EACL 2023",
+  "doi": "10.18653/v1/2023.eacl-main.10",
+  "arxiv": "https://arxiv.org/abs/2208.12888",
+  "officialBib": "https://aclanthology.org/2023.eacl-main.10.bib",
+  "pdf": "paper.pdf",
+  "pages": 9,
+  "coverage": "full text",
+  "screening": "Direct evaluation neighbor: compares held-speaker/session-out, random, heuristic, and adversarial splits across five low-resource ASR languages.",
+  "status": "downloaded 2026-10-13"
+}
