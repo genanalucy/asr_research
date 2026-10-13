@@ -37,3 +37,10 @@ literature/**/first-page.txt
 *.tmp
 *.temp
 *.swp
+__pycache__/
+*.py[cod]
+
+# Private data inventories and transcript exports
+audit/private/
+audit/raw/
+*.tar.gz
