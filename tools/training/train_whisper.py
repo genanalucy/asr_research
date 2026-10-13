@@ -9,7 +9,9 @@ import copy
 import hashlib
 import json
 import math
+import os
 import random
+import tempfile
 import time
 from pathlib import Path
 
@@ -157,17 +159,27 @@ def evaluate(model, loader, processor, prefix, generation_config, device, output
     return metrics
 
 
-def save_checkpoint(path, model, optimizer, scheduler, step, best_cer, contract):
-    torch.save({
+def save_checkpoint(path, model, optimizer, scheduler, step, best_cer, contract, training_state=None):
+    state = {
         'model': model.state_dict(), 'optimizer': optimizer.state_dict(),
         'scheduler': scheduler.state_dict(), 'step': step, 'best_cer': best_cer,
         'contract': contract, 'torch_rng': torch.get_rng_state(),
         'cuda_rng': torch.cuda.get_rng_state_all(), 'python_rng': random.getstate(),
         'numpy_rng': np.random.get_state(),
-    }, path)
+        'training_state': training_state or {},
+    }
+    path = Path(path)
+    fd, temporary = tempfile.mkstemp(prefix=path.name + '.', suffix='.tmp', dir=path.parent)
+    os.close(fd)
+    try:
+        torch.save(state, temporary)
+        os.replace(temporary, path)
+    finally:
+        if os.path.exists(temporary):
+            os.unlink(temporary)
 
 
-def restore_checkpoint(path, model, optimizer, scheduler, contract):
+def restore_checkpoint(path, model, optimizer, scheduler, contract, return_tracking=False):
     # Only our own locally created checkpoints are accepted by this CLI.
     state = torch.load(path, map_location='cpu', weights_only=False)
     if state['contract'] != contract:
@@ -179,7 +191,8 @@ def restore_checkpoint(path, model, optimizer, scheduler, contract):
     torch.cuda.set_rng_state_all(state['cuda_rng'])
     random.setstate(state['python_rng'])
     np.random.set_state(state['numpy_rng'])
-    return int(state['step']), float(state['best_cer'])
+    result = (int(state['step']), float(state['best_cer']))
+    return (*result, state.get('training_state', {})) if return_tracking else result
 
 
 @torch.no_grad()
@@ -229,7 +242,10 @@ def run(args):
     train_rows, train_rejected = filtered_rows(
         args.train_manifest, processor, prefix[1:], max_tokens, output / 'excluded.jsonl',
     )
+    full_rows = None
     if args.mode == 'sanity':
+        if args.skip_initial_eval or args.full_dev_manifest or args.early_stopping_patience:
+            raise ValueError('Sanity mode requires its original training-overfit gate')
         selected, seen = [], set()
         for row in train_rows:
             key = row.get('sha256') or row['audio']
@@ -254,9 +270,29 @@ def run(args):
         train_hashes = {row.get('sha256') or row['audio'] for row in train_rows}
         if any((row.get('sha256') or row['audio']) in train_hashes for row in eval_rows):
             raise RuntimeError('Train/evaluation audio overlap')
+        train_speakers = {row.get('speaker_candidate') for row in train_rows}
+        if None in train_speakers or any(row.get('speaker_candidate') in train_speakers for row in eval_rows):
+            raise RuntimeError('Missing speaker identity or train/development speaker overlap')
+        if args.full_dev_manifest:
+            full_rows, full_rejected = filtered_rows(
+                args.full_dev_manifest, processor, prefix[1:], max_tokens, output / 'excluded.jsonl',
+            )
+            if any((row.get('sha256') or row['audio']) in train_hashes for row in full_rows):
+                raise RuntimeError('Train/full-development audio overlap')
+            if any(row.get('speaker_candidate') is None or row.get('speaker_candidate') in train_speakers for row in full_rows):
+                raise RuntimeError('Missing speaker identity or train/full-development speaker overlap')
+            full_keys = {row.get('sha256') or row['audio'] for row in full_rows}
+            if not {(row.get('sha256') or row['audio']) for row in eval_rows} <= full_keys:
+                raise RuntimeError('Monitoring examples must be contained in full development')
+            if args.full_eval_every is None:
+                args.full_eval_every = math.ceil(len(train_rows) / (args.batch_size * args.grad_accum))
     for name, rows in [('train_used', train_rows), ('eval_used', eval_rows)]:
         (output / f'{name}.jsonl').write_text(
             ''.join(json.dumps(row, ensure_ascii=False) + '\n' for row in rows), encoding='utf-8',
+        )
+    if full_rows is not None:
+        (output / 'full_eval_used.jsonl').write_text(
+            ''.join(json.dumps(row, ensure_ascii=False) + '\n' for row in full_rows), encoding='utf-8',
         )
     contract = {
         'model_dir': str(Path(args.model_dir).resolve()), 'mode': args.mode,
@@ -265,6 +301,10 @@ def run(args):
         'batch_size': args.batch_size, 'grad_accum': args.grad_accum,
         'warmup_steps': args.warmup_steps, 'weight_decay': args.weight_decay,
         'max_grad_norm': args.max_grad_norm,
+        'full_eval_sha256': manifest_digest(full_rows) if full_rows is not None else None,
+        'full_eval_every': args.full_eval_every,
+        'early_stopping_patience': args.early_stopping_patience,
+        'min_steps': args.min_steps,
     }
     config = dict(vars(args))
     config.update({
@@ -275,15 +315,28 @@ def run(args):
         'train_utterances': len(train_rows), 'eval_utterances': len(eval_rows),
         'train_hours': sum(float(row['duration']) for row in train_rows) / 3600,
         'excluded_train': train_rejected, 'excluded_dev': dev_rejected,
+        'full_eval_utterances': len(full_rows) if full_rows is not None else None,
+        'excluded_full_dev': full_rejected if full_rows is not None else None,
         'torch': torch.__version__, 'device': torch.cuda.get_device_name(),
         'evaluation_scope': 'training_overfit' if args.mode == 'sanity' else 'fixed_development_subset',
+        'checkpoint_selection_scope': 'complete_filtered_development' if full_rows is not None else 'fixed_development_subset',
         'metric_units': 'fraction',
     })
     write_json(output / 'run_config.json', config)
     train_data = SpeechDataset(train_rows, processor, prefix[1:], max_tokens)
     eval_data = SpeechDataset(eval_rows, processor, prefix[1:], max_tokens)
-    train_loader = DataLoader(train_data, batch_size=args.batch_size, shuffle=True, collate_fn=collate)
-    eval_loader = DataLoader(eval_data, batch_size=args.batch_size, shuffle=False, collate_fn=collate)
+    loader_options = {'num_workers': args.workers}
+    if args.workers:
+        loader_options.update(multiprocessing_context='spawn', persistent_workers=True)
+    train_loader = DataLoader(train_data, batch_size=args.batch_size, shuffle=True, collate_fn=collate, **loader_options)
+    eval_batch_size = args.eval_batch_size or args.batch_size
+    eval_loader = DataLoader(eval_data, batch_size=eval_batch_size, shuffle=False, collate_fn=collate, **loader_options)
+    full_loader = None
+    if full_rows is not None:
+        full_loader = DataLoader(
+            SpeechDataset(full_rows, processor, prefix[1:], max_tokens),
+            batch_size=eval_batch_size, shuffle=False, collate_fn=collate, **loader_options,
+        )
     model.to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     warmup = args.warmup_steps if args.warmup_steps is not None else max(1, int(args.max_steps * .05))
@@ -295,16 +348,27 @@ def run(args):
 
     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, multiplier)
     step, best_cer = 0, float('inf')
+    resume_tracking = {}
     if args.resume:
-        step, best_cer = restore_checkpoint(args.resume, model, optimizer, scheduler, contract)
-    initial = evaluate(model, eval_loader, processor, prefix, generation_config, device, output / 'initial_predictions.jsonl')
-    append_jsonl(output / 'metrics.jsonl', {'step': step, 'phase': 'initial', **initial})
+        step, best_cer, resume_tracking = restore_checkpoint(args.resume, model, optimizer, scheduler, contract, return_tracking=True)
+    initial = None
+    if not args.skip_initial_eval:
+        initial = evaluate(model, eval_loader, processor, prefix, generation_config, device, output / 'initial_predictions.jsonl')
+        append_jsonl(output / 'metrics.jsonl', {'step': step, 'phase': 'initial', **initial})
     iterator = iter(train_loader)
     start_time = time.monotonic()
     checkpoint_witness = None
     interval = min(50, args.eval_every) if args.mode == 'sanity' else args.eval_every
     rolling_loss, rolling_batches = 0., 0
+    optimizer_seconds = float(resume_tracking.get('optimizer_seconds', 0.))
+    stale_evaluations = int(resume_tracking.get('stale_evaluations', 0))
+    stopped_early = False
+    if args.resume and not resume_tracking and (output / 'early_stopping.json').exists():
+        stop_state = json.loads((output / 'early_stopping.json').read_text())
+        if stop_state['step'] == step:
+            stale_evaluations = stop_state['stale_evaluations']
     for step in range(step + 1, args.max_steps + 1):
+        update_started = time.monotonic()
         model.train()
         optimizer.zero_grad(set_to_none=True)
         for _ in range(args.grad_accum):
@@ -327,12 +391,15 @@ def run(args):
             raise RuntimeError(f'Non-finite gradient norm at step {step}')
         optimizer.step()
         scheduler.step()
+        optimizer_seconds += time.monotonic() - update_started
         if step % 100 == 0 or step == 1 or step == args.max_steps:
             record = {
                 'step': step, 'phase': 'train', 'loss': rolling_loss / rolling_batches,
                 'lr': scheduler.get_last_lr()[0], 'grad_norm': float(grad_norm),
                 'elapsed_seconds': time.monotonic() - start_time,
                 'max_cuda_memory_gb': torch.cuda.max_memory_allocated() / 2**30,
+                'optimizer_seconds': optimizer_seconds,
+                'approx_epochs': step * args.batch_size * args.grad_accum / len(train_rows),
             }
             append_jsonl(output / 'metrics.jsonl', record)
             print(json.dumps(record), flush=True)
@@ -365,18 +432,62 @@ def run(args):
             )
             append_jsonl(output / 'metrics.jsonl', {'step': step, 'phase': 'eval', **metrics})
             print(json.dumps({'step': step, 'phase': 'eval', **metrics}), flush=True)
-            if metrics['cer'] < best_cer:
+            if full_loader is None and metrics['cer'] < best_cer:
                 best_cer = metrics['cer']
                 model.save_pretrained(output / 'best')
                 processor.save_pretrained(output / 'best')
                 write_json(output / 'best_metrics.json', {'step': step, **metrics})
-            if args.mode == 'train':
-                save_checkpoint(output / 'resume_checkpoint.pt', model, optimizer, scheduler, step, best_cer, contract)
             write_json(output / 'status.json', {'state': 'running', 'step': step, 'max_steps': args.max_steps})
+        selected_metrics = None
+        if full_loader is not None and (step % args.full_eval_every == 0 or step == args.max_steps):
+            write_json(output / 'status.json', {'state': 'evaluating_full_dev', 'step': step, 'max_steps': args.max_steps})
+            selected_metrics = evaluate(
+                model, full_loader, processor, prefix, generation_config, device,
+                output / f'full_dev_predictions_step_{step}.jsonl',
+            )
+            append_jsonl(output / 'metrics.jsonl', {'step': step, 'phase': 'full_eval', **selected_metrics})
+            print(json.dumps({'step': step, 'phase': 'full_eval', **selected_metrics}), flush=True)
+        elif full_loader is None and (step % interval == 0 or step == args.max_steps):
+            selected_metrics = metrics
+        if selected_metrics is not None:
+            improved = selected_metrics['cer'] < best_cer if full_loader is not None else selected_metrics['cer'] <= best_cer
+            if improved:
+                best_cer = selected_metrics['cer']
+                stale_evaluations = 0
+                if full_loader is not None:
+                    model.save_pretrained(output / 'best')
+                    processor.save_pretrained(output / 'best')
+                    write_json(output / 'best_metrics.json', {'step': step, 'scope': 'complete_filtered_development', **selected_metrics})
+            else:
+                stale_evaluations += 1
+            write_json(output / 'early_stopping.json', {'step': step, 'stale_evaluations': stale_evaluations, 'best_cer': best_cer})
+            if args.early_stopping_patience and step >= args.min_steps and stale_evaluations >= args.early_stopping_patience:
+                stopped_early = True
+        if args.mode == 'train' and (selected_metrics is not None or step % interval == 0):
+            save_checkpoint(output / 'resume_checkpoint.pt', model, optimizer, scheduler, step, best_cer, contract, {
+                'stale_evaluations': stale_evaluations, 'optimizer_seconds': optimizer_seconds,
+            })
+        write_json(output / 'status.json', {
+            'state': 'running', 'step': step, 'max_steps': args.max_steps,
+            'approx_epochs': step * args.batch_size * args.grad_accum / len(train_rows),
+            'elapsed_seconds': time.monotonic() - start_time,
+            'max_cuda_memory_gb': torch.cuda.max_memory_allocated() / 2**30,
+        })
+        if stopped_early:
+            break
     model.save_pretrained(output / 'final')
     processor.save_pretrained(output / 'final')
-    final = evaluate(model, eval_loader, processor, prefix, generation_config, device, output / 'final_predictions.jsonl')
+    final = evaluate(model, full_loader or eval_loader, processor, prefix, generation_config, device, output / 'final_predictions.jsonl')
     write_json(output / 'final_metrics.json', {'step': step, **final})
+    if full_loader is not None:
+        best_model = WhisperForConditionalGeneration.from_pretrained(output / 'best', local_files_only=True)
+        best_model.config.use_cache = False
+        best_model.detect_language = forbid_language_detection
+        del optimizer, scheduler, model
+        torch.cuda.empty_cache()
+        best_model.to(device)
+        best_metrics = evaluate(best_model, full_loader, processor, prefix, generation_config, device, output / 'best_full_dev_predictions.jsonl')
+        write_json(output / 'best_full_dev_metrics.json', best_metrics)
     passed = True
     if args.mode == 'sanity':
         criteria = {
@@ -394,6 +505,7 @@ def run(args):
     write_json(output / 'status.json', {
         'state': 'completed' if passed else 'gate_failed', 'step': step,
         'elapsed_seconds': time.monotonic() - start_time, 'metrics': final,
+        'stopped_early': stopped_early, 'optimizer_seconds': optimizer_seconds,
     })
     if not passed:
         raise RuntimeError('M0 gate failed; inspect measured loss/CER and checkpoint witness')
@@ -413,6 +525,13 @@ def main():
     parser.add_argument('--seed', type=int, default=42)
     parser.add_argument('--eval-limit', type=int, default=128)
     parser.add_argument('--eval-every', type=int, default=500)
+    parser.add_argument('--full-dev-manifest', help='Full development is the only checkpoint selection source when provided')
+    parser.add_argument('--full-eval-every', type=int, help='Defaults to approximately one training epoch')
+    parser.add_argument('--eval-batch-size', type=int)
+    parser.add_argument('--workers', type=int, default=0)
+    parser.add_argument('--skip-initial-eval', action='store_true', help='Train mode only; never skips the M0 initial witness')
+    parser.add_argument('--early-stopping-patience', type=int, default=0)
+    parser.add_argument('--min-steps', type=int, default=0)
     parser.add_argument('--warmup-steps', type=int)
     parser.add_argument('--weight-decay', type=float, default=.01)
     parser.add_argument('--max-grad-norm', type=float, default=1.)
@@ -422,6 +541,14 @@ def main():
     args = parser.parse_args()
     if args.eval_limit < 1 or args.eval_every < 1 or args.lr <= 0 or args.max_grad_norm <= 0:
         parser.error('eval-limit/eval-every/lr/max-grad-norm must be positive')
+    if args.workers < 0 or args.early_stopping_patience < 0 or args.min_steps < 0:
+        parser.error('workers, patience and min-steps must be non-negative')
+    if args.full_eval_every is not None and args.full_eval_every < 1:
+        parser.error('full-eval-every must be positive')
+    if args.eval_batch_size is not None and args.eval_batch_size < 1:
+        parser.error('eval-batch-size must be positive')
+    if args.early_stopping_patience and not args.full_dev_manifest:
+        parser.error('Early stopping requires full development evaluation')
     try:
         run(args)
     except Exception as error:
