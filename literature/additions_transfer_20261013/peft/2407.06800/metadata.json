@@ -1,0 +1,22 @@
+{
+  "title": "Learn and Don't Forget: Adding a New Language to ASR Foundation Models",
+  "authors": [
+    "Mengjie Qian",
+    "Siyuan Tang",
+    "Rao Ma",
+    "Kate M. Knill",
+    "Mark J. F. Gales"
+  ],
+  "year": 2024,
+  "venue": "Interspeech 2024",
+  "doi": "10.21437/Interspeech.2024-1045",
+  "arxiv": "2407.06800",
+  "official_source": "https://www.isca-archive.org/interspeech_2024/qian24_interspeech.html",
+  "open_source": "https://arxiv.org/abs/2407.06800",
+  "pdf_source": "https://arxiv.org/pdf/2407.06800",
+  "read_scope": "Read abstract; methods 2.1-2.5; dataset and settings 3.1-3.4; results tables 3-4; conclusion. PDF is 6 pages. No code or experiment rerun.",
+  "key_evidence": "FLEURS languages have about 12 h each. Whisper large-v3. Full FT gave best target-language performance but degraded prior-language performance; SLCT/SPT/LoRA preserved prior capabilities at a target-performance cost. LoRA rank 8 on attention; soft language code is a learned embedding, not an existing token insertion.",
+  "sha256": "aff1b347938f645e7506f0db9f4ab22e6185811d43181a5a7d66686a2f8c7f62",
+  "pages": 6,
+  "bytes": 383553
+}

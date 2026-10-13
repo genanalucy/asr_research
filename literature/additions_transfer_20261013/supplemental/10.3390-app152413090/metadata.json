@@ -1,0 +1,25 @@
+{
+  "title": "Low-Resource Speech Recognition by Fine-Tuning Whisper with Optuna-LoRA",
+  "authors": [
+    "Huan Wang",
+    "Jie Bin",
+    "Chunyan Gou",
+    "Lian Yang",
+    "Baolin Hou",
+    "Mingwei Qin"
+  ],
+  "year": 2025,
+  "journal": "Applied Sciences",
+  "volume": "15",
+  "issue": "24",
+  "article_number": "13090",
+  "doi": "10.3390/app152413090",
+  "source_1": "https://www.mdpi.com/2076-3417/15/24/13090/pdf",
+  "source_1_result": "HTTP 403; 411-byte HTML response retained as failed-source1.html",
+  "source_2": "https://mdpi-res.com/d_attachment/applsci/applsci-15-13090/article_deploy/applsci-15-13090.pdf",
+  "download_status": "success from source_2",
+  "read_status": "official metadata and first-page abstract checked; full text not read",
+  "pages": 22,
+  "sha256": "a25b6027f56636e195d27d2d1afd5e9a7b48b0814a9ce0e74beffa1020bed58b",
+  "bytes": 951748
+}

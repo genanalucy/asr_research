@@ -2,6 +2,8 @@
 
 整理日期：2026-10-12。
 
+以下数量是该历史批次的统计，不包含之后的补充目录。2026-10-14迁移适配调研见[方向对比](../docs/迁移学习与快速成果路线.md)、[PEFT笔记](../docs/literature/transfer-peft-directions.md)、[CPT/蒸馏笔记](../docs/literature/transfer-distillation-cpt-notes.md)与[独立补充BibTeX](transfer-adaptation-references.bib)；逐篇阅读范围记录在笔记/metadata中。
+
 - 已下载 **29篇不同论文、30份PDF**。Whisper公开预印本与ICML正式版属于同一篇，不重复计数；总目录优先指向ICML正式版。
 - **3篇尚未取得全文**：见[需要补充全文](需要补充全文.md)。
 - 所有30份PDF均检查了文件签名、可解析页数、首页题名和SHA256；这不等于已经逐篇精读全文。

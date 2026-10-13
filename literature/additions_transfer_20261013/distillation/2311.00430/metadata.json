@@ -1,0 +1,17 @@
+{
+  "title": "Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling",
+  "authors": [
+    "Sanchit Gandhi",
+    "Patrick von Platen",
+    "Alexander M. Rush"
+  ],
+  "year": 2023,
+  "arxiv_id": "2311.00430",
+  "page": "https://arxiv.org/abs/2311.00430",
+  "pdf_url": "https://arxiv.org/pdf/2311.00430",
+  "sha256": "98f13a4ef2762a05ce9e43848eb46921c0a0b44f97ca95526462e32b4e30ddae",
+  "bytes": 2513329,
+  "pages": 30,
+  "read_scope": "abstract and selected method/experimental sections; not a full paper reading claim",
+  "purpose": "Large-teacher/small-student ASR distillation; published checkpoints do not establish Zhuang coverage"
+}

@@ -1,0 +1,8 @@
+# Supplemental Full-Text Download Status (2026-10-14)
+
+Both public full texts were downloaded. Each PDF was checked for a `%PDF-` signature, inspected with `pdfinfo`, and hashed with SHA-256. Metadata records explicitly mark these as download-only; neither full text was read in this task.
+
+| Record | Source tried | Result | File verification |
+|---|---|---|---|
+| arXiv:2609.29800, *Adaptive Fisher-Whitened Cross-Covariance for Low-Resource Speech Recognition* | [arXiv PDF](https://arxiv.org/pdf/2609.29800) | HTTP 200, `application/pdf`, 266,909 bytes | 5 pages; SHA-256 `a5e7703fdf84f2941ecf77e73176c52fac02992b052fb0db99a63c2b9ce83278`; [PDF](../../literature/additions_transfer_20261013/supplemental/2609.29800/paper.pdf), [metadata](../../literature/additions_transfer_20261013/supplemental/2609.29800/metadata.json) |
+| DOI 10.3390/app152413090, *Low-Resource Speech Recognition by Fine-Tuning Whisper with Optuna-LoRA* | [MDPI PDF endpoint](https://www.mdpi.com/2076-3417/15/24/13090/pdf) | HTTP 403, 411-byte HTML response; retained as [`failed-source1.html`](../../literature/additions_transfer_20261013/supplemental/10.3390-app152413090/failed-source1.html) | Second public source succeeded: [MDPI static PDF](https://mdpi-res.com/d_attachment/applsci/applsci-15-13090/article_deploy/applsci-15-13090.pdf), HTTP 200, `application/pdf`, 951,748 bytes; 22 pages; SHA-256 `a25b6027f56636e195d27d2d1afd5e9a7b48b0814a9ce0e74beffa1020bed58b`; [PDF](../../literature/additions_transfer_20261013/supplemental/10.3390-app152413090/paper.pdf), [metadata](../../literature/additions_transfer_20261013/supplemental/10.3390-app152413090/metadata.json) |

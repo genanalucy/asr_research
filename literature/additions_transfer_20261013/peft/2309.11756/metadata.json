@@ -1,0 +1,19 @@
+{
+  "title": "Sparsely Shared LoRA on Whisper for Child Speech Recognition",
+  "authors": [
+    "Wei Liu",
+    "Ying Qin",
+    "Zhiyuan Peng",
+    "Tan Lee"
+  ],
+  "year": 2024,
+  "status": "arXiv:2309.11756, submitted 2023; publication venue not verified in this pass",
+  "arxiv": "2309.11756",
+  "official_source": "https://arxiv.org/abs/2309.11756",
+  "pdf_source": "https://arxiv.org/pdf/2309.11756",
+  "read_scope": "Read abstract; method sections on LoRA, AdaLoRA, and S2-LoRA; dataset and adaptation settings; result tables 1-2 and conclusion. PDF is 5 pages. No code or experiment rerun.",
+  "key_evidence": "CSRC-2021 child speech includes 28.6 h read and 29.5 h conversational Mandarin; the adaptation study uses the 28.6 h read set, with 1K/10K/30K utterance subsets. S2-LoRA shares low-rank matrices and learns sparse rank coefficients; it is competitive in-domain and improves out-of-domain generalization with 0.02% trainable parameters. PEFT can outperform full FT in this setup; full FT often degraded on larger Whisper models at 1K examples. Cantonese performance worsened under Mandarin adaptation, discussed as language-ID/token modeling conflict.",
+  "pages": 5,
+  "sha256": "2372546f2d09b6047d8a2d9306545d58dac16d339f404cddaa4a5d18bb20f69a",
+  "bytes": 846568
+}

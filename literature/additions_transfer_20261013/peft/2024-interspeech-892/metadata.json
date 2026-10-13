@@ -1,0 +1,21 @@
+{
+  "title": "LoRA-Whisper: Parameter-Efficient and Extensible Multilingual ASR",
+  "authors": [
+    "Zheshu Song",
+    "Jianheng Zhuo",
+    "Yifan Yang",
+    "Ziyang Ma",
+    "Shixiong Zhang",
+    "Xie Chen"
+  ],
+  "year": 2024,
+  "venue": "Interspeech 2024",
+  "doi": "10.21437/Interspeech.2024-892",
+  "official_source": "https://www.isca-archive.org/interspeech_2024/song24_interspeech.html",
+  "pdf_source": "https://www.isca-archive.org/interspeech_2024/song24_interspeech.pdf",
+  "read_scope": "Read official ISCA metadata and abstract; methods 3.1-3.3, dataset/training 4.1-4.2, language-expansion results 4.3-4.5, tables 1-5 and conclusion. PDF is 5 pages. No code or experiment rerun.",
+  "key_evidence": "Whisper-small, language-specific LoRA in encoder and decoder; LoRA warm start and LoRA MoE for new languages. FLEURS target-language training data ranges 7.4-12.2 h; existing-language donor data in MLS ranges 103-247 h. The paper already compares donor LoRA initialization and finds the most similar donor works best; wrong donor initialization can be worse than training the adapter from scratch. Reported 23% relative gain over full fine-tuning for warm start and 5% over recipient LoRA for MoE in its language-expansion setup.",
+  "pages": 5,
+  "sha256": "1aaae824b8111413c8007da358ec29832edd74e9b69809a5d164976d3cef3a29",
+  "bytes": 1288832
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Probing LoRA-to-LoRA Cross-Lingual Transfer for Unseen Low-Resource Conditions in Whisper-Based ASR",
+  "authors": [
+    "Hirak Mondal",
+    "Spandan Dey",
+    "Gopal Agrawal"
+  ],
+  "year": 2026,
+  "venue": "Interspeech 2026",
+  "doi": "10.21437/Interspeech.2026-1133",
+  "arxiv_id": null,
+  "official_source": "https://www.isca-archive.org/interspeech_2026/mondal26_interspeech.html",
+  "pdf_source": "https://www.isca-archive.org/interspeech_2026/mondal26_interspeech.pdf",
+  "read_scope": "Read official ISCA metadata and abstract; methods 3.1-3.3; dataset, donor-recipient setup and training 4.1-4.3; tables 2-4, results 5.1-5.2 and conclusion. PDF is 5 pages. No code or experiment rerun.",
+  "key_evidence": "Whisper-small, LoRA rank 32 on attention and feed-forward projections in both encoder and decoder; donor LoRA weights initialize a recipient LoRA, with recipient data then used for adaptation. Donors: Hindi 600 h, Bengali 600 h, Marathi 550 h. Recipient conditions: Bhojpuri 40/80 h, Assamese 40 h, Konkani 60/100 h. The authors report relative WER reductions of 9-17% against recipient-only LoRA. A concrete near-neighbor; its donor-initialization and JS orthographic-divergence idea cannot be claimed as new.",
+  "pages": 5,
+  "sha256": "d0705a93c61e9be67665db78e83fd41135778d1aab9540661a98fe1e8f6128e4",
+  "bytes": 558988
+}
