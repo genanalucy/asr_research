@@ -3,10 +3,10 @@
   "key": "2024_fieldmatters_manchu",
   "title": "ManWav: The First Manchu ASR Model",
   "authors": [
-    "Seo",
-    "Lee",
-    "Kim",
-    "Lee"
+    "Jean Seo",
+    "Minha Kang",
+    "SungJoo Byun",
+    "Sangah Lee"
   ],
   "year": "2024",
   "doi": "10.18653/v1/2024.fieldmatters-1.2",
@@ -23,5 +23,11 @@
   "directory": "/Users/bb/myfiles/asr_rssearch/literature/2024_fieldmatters_manchu",
   "firstPageTitleMatch": true,
   "priority": "A",
-  "date": "2024"
+  "date": "2024",
+  "verifiedBibtex": "@inproceedings{2024_fieldmatters_manchu,\n    title = \"{M}an{W}av: The First {M}anchu {ASR} Model\",\n    author = \"Seo, Jean  and\n      Kang, Minha  and\n      Byun, SungJoo  and\n      Lee, Sangah\",\n    editor = \"Serikov, Oleg  and\n      Voloshina, Ekaterina  and\n      Postnikova, Anna  and\n      Muradoglu, Saliha  and\n      Le Ferrand, Eric  and\n      Klyachko, Elena  and\n      Vylomova, Ekaterina  and\n      Shavrina, Tatiana  and\n      Tyers, Francis\",\n    booktitle = \"Proceedings of the Third Workshop on {NLP} Applications to Field Linguistics\",\n    month = aug,\n    year = \"2024\",\n    address = \"Bangkok, Thailand\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.fieldmatters-1.2/\",\n    doi = \"10.18653/v1/2024.fieldmatters-1.2\",\n    pages = \"6--11\"\n}\n\n",
+  "bibtexSource": "https://aclanthology.org/2024.fieldmatters-1.2.bib",
+  "bibtexVerifiedOn": "2026-10-13",
+  "venue": "Proceedings of the Third Workshop on {NLP} Applications to Field Linguistics",
+  "publisher": "Association for Computational Linguistics",
+  "publicationPages": "6--11"
 }

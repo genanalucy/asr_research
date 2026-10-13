@@ -1,11 +1,12 @@
 {
   "src": "/tmp/asr_rssearch_bib_audit/faithful_transcription2025_ijcnlp.pdf",
   "key": "2025_ijcnlp_faithful_transcription",
-  "title": "Faithful Transcription: Leveraging Bible Recordings for Low-Resource ASR",
+  "title": "Faithful Transcription: Leveraging Bible Recordings to Improve ASR for Endangered Languages",
   "authors": [
-    "Le Ferrand",
-    "Michaud",
-    "Adams"
+    "Eric Le Ferrand",
+    "Cian Mohamed Bashar Hauser",
+    "Joshua Hartshorne",
+    "Emily Prud'hommeaux"
   ],
   "year": "2025",
   "doi": "10.18653/v1/2025.ijcnlp-short.28",
@@ -22,5 +23,11 @@
   "directory": "/Users/bb/myfiles/asr_rssearch/literature/2025_ijcnlp_faithful_transcription",
   "firstPageTitleMatch": true,
   "priority": "A",
-  "date": "2025"
+  "date": "2025",
+  "verifiedBibtex": "@inproceedings{2025_ijcnlp_faithful_transcription,\n    title = \"Faithful Transcription: Leveraging {B}ible Recordings to Improve {ASR} for Endangered Languages\",\n    author = \"Le Ferrand, Eric  and\n      Hauser, Cian Mohamed Bashar  and\n      Hartshorne, Joshua  and\n      Prud{'}hommeaux, Emily\",\n    editor = \"Inui, Kentaro  and\n      Sakti, Sakriani  and\n      Wang, Haofen  and\n      Wong, Derek F.  and\n      Bhattacharyya, Pushpak  and\n      Banerjee, Biplab  and\n      Ekbal, Asif  and\n      Chakraborty, Tanmoy  and\n      Singh, Dhirendra Pratap\",\n    booktitle = \"Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the {A}sia-Pacific Chapter of the {A}ssociation for {C}omputational {L}inguistics\",\n    month = dec,\n    year = \"2025\",\n    address = \"Mumbai, India\",\n    publisher = \"The Asian Federation of Natural Language Processing and The Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.ijcnlp-short.28/\",\n    doi = \"10.18653/v1/2025.ijcnlp-short.28\",\n    pages = \"333--342\",\n    ISBN = \"979-8-89176-299-2\"\n}\n\n",
+  "bibtexSource": "https://aclanthology.org/2025.ijcnlp-short.28.bib",
+  "bibtexVerifiedOn": "2026-10-13",
+  "venue": "Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the {A}sia-Pacific Chapter of the {A}ssociation for {C}omputational {L}inguistics",
+  "publisher": "The Asian Federation of Natural Language Processing and The Association for Computational Linguistics",
+  "publicationPages": "333--342"
 }

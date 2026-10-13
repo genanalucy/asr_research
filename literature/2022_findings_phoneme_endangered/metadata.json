@@ -1,9 +1,9 @@
 {
   "src": "/tmp/asr_rssearch_bib_audit/phoneme_endangered2022_acl.pdf",
   "key": "2022_findings_phoneme_endangered",
-  "title": "Phoneme transcription of endangered languages: A comparative study of architectures and data regimes",
+  "title": "Phoneme transcription of endangered languages: an evaluation of recent ASR architectures in the single speaker scenario",
   "authors": [
-    "Boulianne"
+    "Gilles Boulianne"
   ],
   "year": "2022",
   "doi": "10.18653/v1/2022.findings-acl.180",
@@ -20,5 +20,11 @@
   "directory": "/Users/bb/myfiles/asr_rssearch/literature/2022_findings_phoneme_endangered",
   "firstPageTitleMatch": true,
   "priority": "A",
-  "date": "2022"
+  "date": "2022",
+  "verifiedBibtex": "@inproceedings{2022_findings_phoneme_endangered,\n    title = \"Phoneme transcription of endangered languages: an evaluation of recent {ASR} architectures in the single speaker scenario\",\n    author = \"Boulianne, Gilles\",\n    editor = \"Muresan, Smaranda  and\n      Nakov, Preslav  and\n      Villavicencio, Aline\",\n    booktitle = \"Findings of the {A}ssociation for {C}omputational {L}inguistics: {ACL} 2022\",\n    month = may,\n    year = \"2022\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.findings-acl.180/\",\n    doi = \"10.18653/v1/2022.findings-acl.180\",\n    pages = \"2301--2308\"\n}\n\n",
+  "bibtexSource": "https://aclanthology.org/2022.findings-acl.180.bib",
+  "bibtexVerifiedOn": "2026-10-13",
+  "venue": "Findings of the {A}ssociation for {C}omputational {L}inguistics: {ACL} 2022",
+  "publisher": "Association for Computational Linguistics",
+  "publicationPages": "2301--2308"
 }

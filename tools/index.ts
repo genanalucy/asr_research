@@ -28,6 +28,7 @@ function bibEscape(s: string) {
   return s.replace(/\\/g, "\\textbackslash{}").replace(/([&%$#_])/g, "\\$1");
 }
 function bib(r: any) {
+  if (r.verifiedBibtex) return r.verifiedBibtex;
   const title = r.title ?? r.expectedTitle;
   const year = String(r.date ?? "").match(/\d{4}/)?.[0] ?? (r.id ? `20${r.id.slice(0, 2)}` : "");
   const key = r.id ? `asr_${r.id.replace(/\W/g, "")}` : r.key.replace(/\W/g, "_");
@@ -35,7 +36,10 @@ function bib(r: any) {
   if (r.authors?.length) fields.push(`  author = {${r.authors.map(bibEscape).join(" and ")}}`);
   if (year) fields.push(`  year = {${year}}`);
   if (r.venue) {
-    fields.push(`  booktitle = {${bibEscape(r.venue)}}`, "  publisher = {PMLR}", "  volume = {202}", "  pages = {28492--28518}");
+    fields.push(`  booktitle = {${bibEscape(r.venue)}}`);
+    if (r.publisher) fields.push(`  publisher = {${bibEscape(r.publisher)}}`);
+    if (r.volume) fields.push(`  volume = {${bibEscape(r.volume)}}`);
+    if (r.publicationPages) fields.push(`  pages = {${bibEscape(r.publicationPages)}}`);
   } else if (r.id) {
     fields.push(`  eprint = {${r.id}}`, "  archivePrefix = {arXiv}");
   }

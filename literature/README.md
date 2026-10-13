@@ -21,11 +21,11 @@ A表示选题/基线/近邻查新优先；B表示补充背景或特定路线的�
 | 2 | Linguistically Informed Evaluation of Multilingual ASR for African Languages | A | [PDF](2026_africanlp_linguistic_eval/paper.pdf) · 14页 | FER/Tone Error Rate与WER/CER并列的核心评测近邻；适合构造壮语/瑶语音系错误分析。 |
 | 3 | ManWav: The First Manchu ASR Model | A | [PDF](2024_fieldmatters_manchu/paper.pdf) · 6页 | 极低资源ASR、音系错误和增强实验的参考；明确报告说话人限制。 |
 | 4 | In-context Language Learning for Endangered Languages in Speech Recognition | A | [PDF](2025_in_context_endangered_asr/paper.pdf) · 6页 | MMS n-best与目标语文本重排序；若走外部LM/文本适配路线，必须做公平基线。 |
-| 5 | Phoneme transcription of endangered languages: A comparative study of architectures and data regimes | A | [PDF](2022_findings_phoneme_endangered/paper.pdf) · 8页 | 多种濒危语言、短时长和PER/架构比较；支持音素级错误诊断与数据规模实验。 |
+| 5 | Phoneme transcription of endangered languages: an evaluation of recent ASR architectures in the single speaker scenario | A | [PDF](2022_findings_phoneme_endangered/paper.pdf) · 8页 | 多种濒危语言、短时长和PER/架构比较；支持音素级错误诊断与数据规模实验。 |
 | 6 | Enhance Contextual Learning in ASR for Endangered Low-resource Languages | A | [PDF](2025_lm4uc_endangered_context/paper.pdf) · 7页 | 低资源语言tokenization、上下文学习和跨语言参数迁移；若研究解码/文本适配可作近邻。 |
 | 7 | Tusom2021: A Phonetically Transcribed Speech Dataset from an Endangered Language for Universal Phone Recognition Experiments | A | [PDF](2021_interspeech_tusom/paper.pdf) · 5页 | 濒危语言音素标注、跨语言phone recognition和声调背景参考。 |
-| 8 | Faithful Transcription: Leveraging Bible Recordings for Low-Resource ASR | A | [PDF](2025_ijcnlp_faithful_transcription/paper.pdf) · 10页 | 朗读域与自然会话域差异；支持域外测试和语料风格控制。 |
-| 9 | Leveraging End-to-End ASR for Endangered Language Documentation: An Empirical Study on Yoloxochitl Mixtec | A | [PDF](2021_eacl_mixtec/paper.pdf) · 12页 | 约100小时濒危语言ASR和数据规模曲线先例；参考speaker-disjoint、10/20/50/90小时扩展，不宣称方法首创。 |
+| 8 | Faithful Transcription: Leveraging Bible Recordings to Improve ASR for Endangered Languages | A | [PDF](2025_ijcnlp_faithful_transcription/paper.pdf) · 10页 | 朗读域与自然会话域差异；支持域外测试和语料风格控制。 |
+| 9 | Leveraging End-to-End ASR for Endangered Language Documentation: An Empirical Study on Yolóxochitl Mixtec | A | [PDF](2021_eacl_mixtec/paper.pdf) · 12页 | 约100小时濒危语言ASR和数据规模曲线先例；参考speaker-disjoint、10/20/50/90小时扩展，不宣称方法首创。 |
 | 10 | Improving ASR Output for Endangered Language Documentation | A | [PDF](2018_sltu_endangered_doc/paper.pdf) · 5页 | ASR输出后处理、词典与语言文档工作流背景；适合讨论实用价值。 |
 | 11 | NoLoR: An ASR-Based Framework for Expedited Endangered Language Documentation with Neo-Aramaic as a Case Study | A | [PDF](2024_nolor_neo_aramaic/paper.pdf) · 6页 | ASR辅助语言文档与人机协作效率；若讨论实用影响可引用，不作为主模型近邻。 |
 | 12 | Low-Resourced Speech Recognition for Iu Mien Language via Weakly-Supervised Phoneme-based Multilingual Pre-training | A | [PDF](2407.13292_iu_mien_asr_retry/paper.pdf) · 5页 | 最直接的勉语ASR先例；MightLJSpeech约9.7小时、9761句、单女性说话人。此次按原页面的Pre-training拼写修正题名后下载。 |

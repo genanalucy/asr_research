@@ -1,14 +1,14 @@
 {
   "src": "/tmp/asr_review/2021.eacl-main.96.pdf",
   "key": "2021_eacl_mixtec",
-  "title": "Leveraging End-to-End ASR for Endangered Language Documentation: An Empirical Study on Yoloxochitl Mixtec",
+  "title": "Leveraging End-to-End ASR for Endangered Language Documentation: An Empirical Study on Yolóxochitl Mixtec",
   "authors": [
-    "Adams",
-    "Michaud",
-    "Pelloni",
-    "Gauthier",
-    "Gales",
-    "Bird"
+    "Jiatong Shi",
+    "Jonathan D. Amith",
+    "Rey Castillo García",
+    "Esteban Guadalupe Sierra",
+    "Kevin Duh",
+    "Shinji Watanabe"
   ],
   "year": "2021",
   "doi": "10.18653/v1/2021.eacl-main.96",
@@ -25,5 +25,11 @@
   "directory": "/Users/bb/myfiles/asr_rssearch/literature/2021_eacl_mixtec",
   "firstPageTitleMatch": true,
   "priority": "A",
-  "date": "2021"
+  "date": "2021",
+  "verifiedBibtex": "@inproceedings{2021_eacl_mixtec,\n    title = \"Leveraging End-to-End {ASR} for Endangered Language Documentation: An Empirical Study on Yol{\\'o}xochitl {M}ixtec\",\n    author = \"Shi, Jiatong  and\n      Amith, Jonathan D.  and\n      Castillo Garc{\\'i}a, Rey  and\n      Guadalupe Sierra, Esteban  and\n      Duh, Kevin  and\n      Watanabe, Shinji\",\n    editor = \"Merlo, Paola  and\n      Tiedemann, Jorg  and\n      Tsarfaty, Reut\",\n    booktitle = \"Proceedings of the 16th Conference of the {E}uropean Chapter of the {A}ssociation for {C}omputational {L}inguistics: Main Volume\",\n    month = apr,\n    year = \"2021\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.eacl-main.96/\",\n    doi = \"10.18653/v1/2021.eacl-main.96\",\n    pages = \"1134--1145\"\n}\n\n",
+  "bibtexSource": "https://aclanthology.org/2021.eacl-main.96.bib",
+  "bibtexVerifiedOn": "2026-10-13",
+  "venue": "Proceedings of the 16th Conference of the {E}uropean Chapter of the {A}ssociation for {C}omputational {L}inguistics: Main Volume",
+  "publisher": "Association for Computational Linguistics",
+  "publicationPages": "1134--1145"
 }

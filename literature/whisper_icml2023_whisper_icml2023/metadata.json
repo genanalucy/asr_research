@@ -26,5 +26,7 @@
   "pdfPath": "/Users/bb/myfiles/asr_rssearch/literature/whisper_icml2023_whisper_icml2023/paper.pdf",
   "bytes": 823459,
   "sha256": "84496ed07ac01bf3d00866a1934f81173ddbba99f7488de59bb8ae3b28f0f85e",
-  "firstPageTitleMatch": true
+  "firstPageTitleMatch": true,
+  "publisher": "PMLR",
+  "publicationPages": "28492--28518"
 }
