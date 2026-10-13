@@ -8,8 +8,8 @@
 | P01 | train内部三个speaker folds | split hash、时长、文本重合统计，仅train | TODO | 身份/内容覆盖清楚 |
 | P02 | 12个首批探针 | 四组rank8×3fold；短预算 | TODO | heldout收益稳定、自由生成CER与loss排序相符 |
 | P03 | 有界rank效用曲线 | 必要时补4/16，共最多36探针 | TODO | 实际参数成本及非加性检查 |
-| S00 | 学习曲线校准 | small107.397h已正式启动；20/50h未启动 | PARTIAL | 真实趋势，不作单点外推 |
-| B00 | 首要全数据强基线 | medium107.397h两条LR均M0通过、正式训练中 | RUNNING | 合理LR/更新预算、完整dev |
+| S00 | 学习曲线校准 | small已主动中断并保留step1000恢复checkpoint；20/50h推迟 | DEFERRED | 真实趋势，不作单点外推 |
+| B00 | 首要全数据强基线 | medium107.397h三路LR1e-5/3e-5/7e-5；三条均M0通过、正式训练中 | RUNNING | 合理LR/更新预算、完整dev |
 | B00-L | 条件性强主干复核 | large-v3或XLS-R / 107h | TODO | 性能/错误证据支持再投入 |
 | E00 | 基线错误诊断 | 完整dev插删替、空格、正字法、逐人和长度 | TODO | 瓶颈是否确与参数位置有关 |
 | B01 | 参数分配对照 | uniform LoRA / AdaLoRA / 候选 / 同成本随机选择 | TODO | 预算公平，关键3seeds |
@@ -28,3 +28,9 @@
 - 启动详情和真实状态路径见 `../docs/全数据实验启动-2026-10-14.md`。此表是快照，后续以服务器日志/JSON为准。
 
 北京时间02:13快照：三条pipeline均baseline_running；尚无完整dev新成绩。small暂估6–9h，medium两路并行20–30h，本轮整体预留24–36h，首轮完整dev后重估。
+
+## 三卡medium参数搜索调整
+
+用户将资源分配交由主代理判断。当前目标是三卡独立medium学习率搜索：GPU5=7e-5、GPU6=1e-5、GPU7=3e-5，预算与清单相同。旧small在1578步主动停止，保存step1000完整恢复checkpoint与全部预测/日志，state为stopped_for_resource_reprioritization；不计入完整训练主表。heartbeat只监控上述三个active medium。
+
+最新实际验收：GPU5 LR7e-5正式16步，GPU6 LR1e-5正式402步，GPU7 LR3e-5正式422步，三条均baseline_running。
