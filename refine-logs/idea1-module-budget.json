@@ -1,0 +1,89 @@
+{
+  "status": "planned; not implemented or trained",
+  "backbone": "openai/whisper-medium",
+  "configuration_source": "https://huggingface.co/openai/whisper-medium/blob/main/config.json",
+  "retrieval_source": "https://hf-mirror.com/openai/whisper-medium/raw/main/config.json",
+  "config_sha256": "18706810eb740d1dc54d1db181358d5f8578600d0f449e51dfd4798c0223a1f5",
+  "d_model": 1024,
+  "encoder_layers": 24,
+  "decoder_layers": 24,
+  "target_projections": [
+    "q_proj",
+    "v_proj"
+  ],
+  "groups": [
+    {
+      "id": "G1",
+      "path": "model.encoder.layers.{0..11}.self_attn",
+      "unit_rank_parameter_cost": 49152
+    },
+    {
+      "id": "G2",
+      "path": "model.encoder.layers.{12..23}.self_attn",
+      "unit_rank_parameter_cost": 49152
+    },
+    {
+      "id": "G3",
+      "path": "model.decoder.layers.{0..23}.self_attn",
+      "unit_rank_parameter_cost": 98304
+    },
+    {
+      "id": "G4",
+      "path": "model.decoder.layers.{0..23}.encoder_attn",
+      "unit_rank_parameter_cost": 98304
+    }
+  ],
+  "uniform_rank": 8,
+  "planned_parameter_budget": 2359296,
+  "exact_budget_candidates": [
+    [
+      4,
+      4,
+      4,
+      16
+    ],
+    [
+      4,
+      4,
+      16,
+      4
+    ],
+    [
+      8,
+      8,
+      8,
+      8
+    ],
+    [
+      8,
+      16,
+      4,
+      8
+    ],
+    [
+      8,
+      16,
+      8,
+      4
+    ],
+    [
+      16,
+      8,
+      4,
+      8
+    ],
+    [
+      16,
+      8,
+      8,
+      4
+    ],
+    [
+      16,
+      16,
+      4,
+      4
+    ]
+  ],
+  "verification": "Public config and installed Transformers4.46.3 WhisperAttention source checked; actual injected model parameter count not yet checked."
+}
