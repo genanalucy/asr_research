@@ -32,6 +32,7 @@ runs/
 # Downloaded full papers and extracted full-page text are kept locally.
 literature/**/paper.pdf
 literature/**/first-page.txt
+literature/**/paper.txt
 
 # Temporary files
 *.tmp
