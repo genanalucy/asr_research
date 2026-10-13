@@ -1,0 +1,16 @@
+{
+  "title": "Unified Gradient Projection: Language-Balanced Continual Learning for Multilingual Low-Resource ASR",
+  "authors": [
+    "Ren, Ziang",
+    "Lin, Guodong",
+    "Ai, Yuchen",
+    "Tan, Kaize",
+    "Zhang, Wei-Qiang"
+  ],
+  "year": 2026,
+  "arxiv_id": "2607.11163",
+  "official_source": "https://arxiv.org/abs/2607.11163",
+  "read_scope": "Official metadata and abstract only; full text not read.",
+  "abstract": "Large-scale pretrained ASR models such as Whisper exhibit strong multilingual capabilities. However, fine-tuning on low-resource languages often causes catastrophic forgetting. Although continual learning mitigates this issue, existing methods struggle to regulate cross-task interference in multilingual settings, where dominant languages bias optimization. We propose Unified Gradient Projection (UGP), which constrains parameter updates using reference gradients from language-balanced replay in a unified projection space. By equalizing per-language contributions in the projection, UGP reduces dominant-language bias and improves cross-lingual stability. We further show that combining gradient-level projection with data-level replay yields complementary gains in stability and plasticity. Across diverse low-resource language groups and model scales, UGP enables effective adaptation while substantially mitigating forgetting. On Whisper-large-v3, it achieves near-zero average forgetting.",
+  "download_status": "not attempted in this bounded pass; official abstract only"
+}

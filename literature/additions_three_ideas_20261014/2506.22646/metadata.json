@@ -1,0 +1,24 @@
+{
+  "title": "Speaker Targeting via Self-Speaker Adaptation for Multi-talker ASR",
+  "authors": [
+    "Wang, Weiqing",
+    "Park, Taejin",
+    "Medennikov, Ivan",
+    "Wang, Jinhan",
+    "Dhawan, Kunal",
+    "Huang, He",
+    "Koluguri, Nithin Rao",
+    "Balam, Jagadeesh",
+    "Ginsburg, Boris"
+  ],
+  "year": 2025,
+  "arxiv_id": "2506.22646",
+  "official_source": "https://arxiv.org/abs/2506.22646",
+  "read_scope": "Luna: abstract and methods 2-2.3; experimental tables/setup skimmed. Primary: official metadata. Not reproduced.",
+  "abstract": "We propose a self-speaker adaptation method for streaming multi-talker automatic speech recognition (ASR) that eliminates the need for explicit speaker queries. Unlike conventional approaches requiring target speaker embeddings or enrollment audio, our technique dynamically adapts individual ASR instances through speaker-wise speech activity prediction. The key innovation involves injecting speaker-specific kernels generated via speaker supervision activations into selected ASR encoder layers. This enables instantaneous speaker adaptation to target speakers while handling fully overlapped speech even in a streaming scenario. Experiments show state-of-the-art performance in both offline and streaming scenarios, demonstrating that our self-adaptive method effectively addresses severe speech overlap through streamlined speaker-focused recognition. The results validate the proposed self-speaker adaptation approach as a robust solution for multi-talker ASR under severe overlapping speech conditions.",
+  "download_status": "verified PDF stored locally",
+  "pdf_source": "https://arxiv.org/pdf/2506.22646",
+  "pages": 6,
+  "bytes": 761150,
+  "sha256": "d4611132b68c954d374fc80e645869024a1ed0377eabe9c521e31011e02914d8"
+}

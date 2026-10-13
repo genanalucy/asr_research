@@ -1,0 +1,25 @@
+{
+  "title": "Perceiver-Prompt: Flexible Speaker Adaptation in Whisper for Chinese Disordered Speech Recognition",
+  "authors": [
+    "Jiang, Yicong",
+    "Wang, Tianzi",
+    "Xie, Xurong",
+    "Liu, Juan",
+    "Sun, Wei",
+    "Yan, Nan",
+    "Chen, Hui",
+    "Wang, Lan",
+    "Liu, Xunying",
+    "Tian, Feng"
+  ],
+  "year": 2024,
+  "arxiv_id": "2406.09873",
+  "official_source": "https://arxiv.org/abs/2406.09873",
+  "read_scope": "Luna: abstract, methods 2-3, setup/results 4 and conclusion 5. Primary: official metadata. Not reproduced.",
+  "abstract": "Disordered speech recognition profound implications for improving the quality of life for individuals afflicted with, for example, dysarthria. Dysarthric speech recognition encounters challenges including limited data, substantial dissimilarities between dysarthric and non-dysarthric speakers, and significant speaker variations stemming from the disorder. This paper introduces Perceiver-Prompt, a method for speaker adaptation that utilizes P-Tuning on the Whisper large-scale model. We first fine-tune Whisper using LoRA and then integrate a trainable Perceiver to generate fixed-length speaker prompts from variable-length inputs, to improve model recognition of Chinese dysarthric speech. Experimental results from our Chinese dysarthric speech dataset demonstrate consistent improvements in recognition performance with Perceiver-Prompt. Relative reduction up to 13.04% in CER is obtained over the fine-tuned Whisper.",
+  "download_status": "verified PDF stored locally",
+  "pdf_source": "https://arxiv.org/pdf/2406.09873",
+  "pages": 5,
+  "bytes": 1120245,
+  "sha256": "28c3cd51b1806c64fbd4670b03013006e6cf944c2adac4ec94bc9e21599cda91"
+}

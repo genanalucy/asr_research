@@ -6,6 +6,7 @@
 
 - [文献总目录](literature/README.md)：历史批次目录，附阅读顺序和用途。
 - [迁移学习与快速成果路线](docs/迁移学习与快速成果路线.md)：2026-10-14方向比较、全数据实验矩阵与排期。
+- [三个创新候选的详细实验设计](refine-logs/EXPERIMENT_PLAN.md)：跨说话人参数分配、音频证据蒸馏、选择性跨语迁移；含可能结果与结论边界。
 - [PEFT近邻文献笔记](docs/literature/transfer-peft-directions.md)与[继续预训练/蒸馏笔记](docs/literature/transfer-distillation-cpt-notes.md)。
 - [迁移适配补充参考库](literature/transfer-adaptation-references.bib)：独立书目，合并时按DOI/题名去重。
 - [已完成5小时基线](docs/基线结果-2026-10-13.md)：工程试跑与共同开发集监控结果。
