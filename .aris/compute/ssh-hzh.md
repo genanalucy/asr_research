@@ -16,3 +16,7 @@
 full缓存：59,925条全部波形与16k mono FLOAT缓存检查通过，0失败。small模型audit已校验哈希与CPU加载；medium也已完成全部文件SHA与离线CPU实际模型/processor加载，status为`offline_cpu_load_verified`。验收没有运行medium GPU forward，实际GPU训练可运行性由每条M0继续验证。
 
 复杂代码复用既有审查代理进行咨询检查；不是fresh跨模型独立审计。训练执行代码固化到各run/code并记录SHA，避免后续编辑改变运行中实现。实际invocation与门控见`docs/全数据启动审查-2026-10-14.md`及启动记录。
+
+## 四卡DDP最新验收
+
+当前修复通过`NCCL_SOCKET_IFNAME=lo`与`NCCL_SOCKET_FAMILY=AF_INET`生效，无环境包升级。真正Gloo CPU/CUDA collectives通过，NCCL四卡Linear DDP5update参数差0，Whisper四卡M0400step过拟合及恢复logits差0通过。正式从原source step17000续训，global16保持；详情见`docs/DDP通信修复与续训-2026-10-14.md`。此前“Gloo也失败”来自错误测试脚本，不能用作运行时不可用证据。

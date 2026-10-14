@@ -16,6 +16,7 @@
 - [迁移适配补充参考库](literature/transfer-adaptation-references.bib)：独立书目，合并时按DOI/题名去重。
 - [已完成5小时基线](docs/基线结果-2026-10-13.md)：工程试跑与共同开发集监控结果。
 - [完整数据强基线启动](docs/全数据实验启动-2026-10-14.md)：当前三条medium学习率pipeline，实际约107.397h训练、完整dev选模与持续监控；small中断记录保留。
+- [当前四卡DDP修复与续训](docs/DDP通信修复与续训-2026-10-14.md)：NCCL网络路径修复已通过，单个medium从最佳参数旧checkpoint17000步继续；旧多任务记录为历史。
 - [选题调研与实验建议](literature/选题调研与实验建议.md)：已有先例、候选研究问题及实验设计。
 - [需要补充全文](literature/需要补充全文.md)：3篇尚未下载成功的论文，含题名、DOI与原因。
 - [已下载文献BibTeX](literature/references.bib)。
