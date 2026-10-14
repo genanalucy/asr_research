@@ -7,7 +7,8 @@
 - [文献总目录](literature/README.md)：历史批次目录，附阅读顺序和用途。
 - [迁移学习与快速成果路线](docs/迁移学习与快速成果路线.md)：2026-10-14方向比较、全数据实验矩阵与排期。
 - [已选点子一的实验设计](refine-logs/EXPERIMENT_PLAN.md)：四组LoRA、跨说话人效用分配、篇幅控制和评分边界。
-- [准确率目标与推进门槛](docs/准确率目标与推进门槛-2026-10-14.md)：先充分训练全数据强基线；数值目标为条件性探索目标，点子一按真实增益决定投入。
+- [准确率目标与推进门槛](docs/准确率目标与推进门槛-2026-10-14.md)：先充分训练全数据强基线；数值目标为条件性探索目标。
+- [降低壮语CER到3%的调研与执行路线](docs/降低壮语CER到3%的调研与执行路线-2026-10-14.md)：放弃点子一，按错误归因选择LM、数据清理、域适配、CPT或更强主干。
 - [三候选历史设计](refine-logs/EXPERIMENT_PLAN_2026-10-14_three-ideas.md)与[壮语公开WER纪录核验](docs/literature/zhuang-asr-record-check-2026-10-14.md)。
 - [PEFT近邻文献笔记](docs/literature/transfer-peft-directions.md)与[继续预训练/蒸馏笔记](docs/literature/transfer-distillation-cpt-notes.md)。
 - [迁移适配补充参考库](literature/transfer-adaptation-references.bib)：独立书目，合并时按DOI/题名去重。
