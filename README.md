@@ -10,6 +10,7 @@
 - [准确率目标与推进门槛](docs/准确率目标与推进门槛-2026-10-14.md)：先充分训练全数据强基线；数值目标为条件性探索目标。
 - [降低壮语CER到3%的调研与执行路线](docs/降低壮语CER到3%的调研与执行路线-2026-10-14.md)：放弃点子一，按错误归因选择LM、数据清理、域适配、CPT或更强主干。
 - [实验室勉语论文对壮语路线的启发](docs/literature/实验室勉语论文对壮语路线的启发-2026-10-14.md)：音素预训练、KenLM/WFST解码、Whistle/CAT复现实验与CER<3%目标边界。
+- [2024–2026低资源ASR新方法调研](docs/低资源ASR新方法调研-2026-10-14.md)：基础模型、LM解码、域适配、伪标签、CPT和音系路线的比较。
 - [三候选历史设计](refine-logs/EXPERIMENT_PLAN_2026-10-14_three-ideas.md)与[壮语公开WER纪录核验](docs/literature/zhuang-asr-record-check-2026-10-14.md)。
 - [PEFT近邻文献笔记](docs/literature/transfer-peft-directions.md)与[继续预训练/蒸馏笔记](docs/literature/transfer-distillation-cpt-notes.md)。
 - [迁移适配补充参考库](literature/transfer-adaptation-references.bib)：独立书目，合并时按DOI/题名去重。
